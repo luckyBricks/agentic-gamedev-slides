@@ -16,6 +16,7 @@ Goals the deck must serve:
 
 1. **`docs/` is the source of truth for slide content.** Each slide in the deck corresponds to a numbered brief in [docs/](air-file://lkccn9uv6uc8u359vjmj/Users/suntao/Projects/presentations/rider-agentic-gamedev/docs?type=folder&root=%252F). Slide copy, structure, and intent must be derived from the matching `docs/NN-*.md` brief. Do not invent narrative that is not grounded in those briefs — if something is missing, ask rather than fabricate.
 2. **Visual style must follow the JetBrains .NET / GameDev design theme.** Colors, gradients, typography accents, and iconography should echo the JetBrains Rider / GameDev brand system (deep purples/indigos, magenta→orange gradients characteristic of Rider, clean geometric layouts). Avoid defaulting to generic Slidev theme looks.
+3. **Use brand assets from `docs/brand-assets/` wherever a product name appears.** This directory contains official SVG logos and icons for all relevant JetBrains products (Rider, Junie, Qodana, ReSharper, TeamCity, dotCover, dotMemory, dotPeek, dotTrace, Toolbox, AI). Each product folder typically has a full logo (`ProductName.svg`), a white variant (`ProductName-white.svg`), and/or an icon (`ProductName_icon.svg`). **Prefer the logo/icon `<img>` over text labels** whenever a product is referenced on a slide — do not describe products with verbose text where a logo conveys the same meaning. Reference them in slides via relative paths, e.g. `<img src="/docs/brand-assets/Rider/Rider_icon.svg" class="h-8 inline" />`.
 
 ## Tech Stack & Operations
 
