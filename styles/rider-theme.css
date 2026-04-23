@@ -1,0 +1,262 @@
+:root {
+  --rider-bg: #0b0616;
+  --rider-bg-2: #140a28;
+  --rider-panel: rgba(255, 255, 255, 0.04);
+  --rider-panel-border: rgba(255, 255, 255, 0.08);
+  --rider-ink: #ecebff;
+  --rider-ink-dim: rgba(236, 235, 255, 0.72);
+  --rider-ink-muted: rgba(236, 235, 255, 0.5);
+  --rider-indigo: #6c3bff;
+  --rider-violet: #9a4bff;
+  --rider-magenta: #e73cff;
+  --rider-pink: #ff3aa8;
+  --rider-orange: #ff7a3c;
+  --rider-amber: #ffb547;
+  --rider-cyan: #3ad9ff;
+  --slidev-theme-primary: #9a4bff;
+}
+
+html.dark,
+html {
+  background: var(--rider-bg);
+  color: var(--rider-ink);
+}
+
+.slidev-layout {
+  background:
+    radial-gradient(1200px 800px at 85% -10%, rgba(231, 60, 255, 0.18), transparent 60%),
+    radial-gradient(900px 600px at -10% 110%, rgba(108, 59, 255, 0.22), transparent 60%),
+    linear-gradient(180deg, var(--rider-bg) 0%, var(--rider-bg-2) 100%);
+  color: var(--rider-ink);
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3,
+.slidev-layout h4 {
+  color: var(--rider-ink);
+  letter-spacing: -0.01em;
+}
+
+.slidev-layout h1 {
+  font-weight: 700;
+}
+
+.slidev-layout code {
+  color: #f2e6ff;
+}
+
+.slidev-layout a {
+  color: var(--rider-magenta);
+}
+
+.rider-gradient-text {
+  background: linear-gradient(90deg, #ff3aa8 0%, #e73cff 35%, #9a4bff 70%, #3ad9ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.rider-heat-text {
+  background: linear-gradient(90deg, #ffb547 0%, #ff7a3c 30%, #ff3aa8 65%, #9a4bff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.rider-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(154, 75, 255, 0.45);
+  background: linear-gradient(90deg, rgba(231, 60, 255, 0.18), rgba(108, 59, 255, 0.18));
+  color: #f6e8ff;
+}
+
+.rider-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(231, 60, 255, 0.6), rgba(108, 59, 255, 0.6), transparent);
+  border: 0;
+}
+
+.rider-card {
+  position: relative;
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
+  border: 1px solid var(--rider-panel-border);
+  box-shadow: 0 10px 40px -20px rgba(154, 75, 255, 0.45);
+  backdrop-filter: blur(6px);
+}
+
+.rider-card--accent::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  padding: 1px;
+  background: linear-gradient(135deg, #ff3aa8, #9a4bff 55%, #3ad9ff);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.rider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff3aa8, #9a4bff);
+  box-shadow: 0 0 10px rgba(231, 60, 255, 0.6);
+}
+
+.rider-kbd {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.78rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.rider-scanline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.02) 0px,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  mix-blend-mode: screen;
+  opacity: 0.4;
+}
+
+.rider-glow-ring {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(60px);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.rider-footer {
+  position: absolute;
+  bottom: 18px;
+  left: 32px;
+  right: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rider-ink-muted);
+  z-index: 10;
+}
+
+.rider-pipeline {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.rider-pipeline__node {
+  position: relative;
+  padding: 0.9rem 0.8rem;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(154, 75, 255, 0.16), rgba(58, 217, 255, 0.06));
+  border: 1px solid rgba(154, 75, 255, 0.3);
+  color: var(--rider-ink);
+  text-align: center;
+  font-size: 0.82rem;
+}
+
+.rider-pipeline__node--gate {
+  background: linear-gradient(180deg, rgba(255, 58, 168, 0.22), rgba(255, 122, 60, 0.15));
+  border-color: rgba(255, 58, 168, 0.6);
+}
+
+.rider-pipeline__node::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -14px;
+  width: 14px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(154, 75, 255, 0.8), rgba(58, 217, 255, 0.4));
+  transform: translateY(-50%);
+}
+
+.rider-pipeline__node:last-child::after {
+  display: none;
+}
+
+.rider-grid-lines {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(154, 75, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(154, 75, 255, 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.9) 20%, transparent 75%);
+  pointer-events: none;
+}
+
+.slidev-layout.cover,
+.slidev-layout.cover h1,
+.slidev-layout.cover h2 {
+  color: var(--rider-ink);
+}
+
+.slidev-layout .rider-subtle {
+  color: var(--rider-ink-dim);
+}
+
+.slidev-layout .rider-muted {
+  color: var(--rider-ink-muted);
+}
+
+.slidev-layout ul > li::marker {
+  color: var(--rider-magenta);
+}
+
+.slidev-layout table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid rgba(154, 75, 255, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.slidev-layout table th {
+  background: linear-gradient(90deg, rgba(231, 60, 255, 0.2), rgba(108, 59, 255, 0.2));
+  color: var(--rider-ink);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.slidev-layout table td,
+.slidev-layout table th {
+  border-color: rgba(154, 75, 255, 0.15);
+  padding: 0.45rem 0.85rem;
+}
+
+.rider-bracket {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  color: var(--rider-magenta);
+  opacity: 0.6;
+}
