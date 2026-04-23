@@ -67,7 +67,7 @@
           </div>
 
           <div class="flex items-center gap-2 rounded" style="padding: 7px 11px; border: 1px dashed rgba(255,255,255,0.16); background: rgba(255,255,255,0.03);">
-            <div style="font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.38); letter-spacing: 0.01em;">+ Any via MCP / REST</div>
+            <div style="font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.38); letter-spacing: 0.01em;">+ Via IJ Platform/ MCP  </div>
           </div>
 
         </div>
