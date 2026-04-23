@@ -20,7 +20,7 @@ const toneMap: Record<string, string> = {
 <template>
   <div class="flex flex-col gap-3 w-full">
     <div class="flex gap-2 items-center justify-center flex-wrap">
-      <span v-for="c in clients" :key="c" class="rider-chip">{{ c }}</span>
+      <span v-for="c in clients" :key="c" class="rider-chip rider-chip--tag">{{ c }}</span>
     </div>
     <div class="text-center text-[10px] uppercase tracking-[0.3em] rider-muted">
       ↓ MCP Steroid protocol

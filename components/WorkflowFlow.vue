@@ -11,7 +11,7 @@ defineProps<{
       v-for="(s, i) in steps"
       :key="s.label"
       class="relative rider-card text-center"
-      :class="[accent === 'heat' ? 'border-[#ff3aa855]' : 'border-[#9a4bff55]']"
+      :style="{ borderColor: accent === 'heat' ? 'var(--mandala-c, rgba(255,255,255,0.2))' : 'var(--mandala-b, rgba(255,255,255,0.2))' }"
     >
       <div class="text-[10px] uppercase tracking-[0.25em] rider-muted">Step 0{{ i + 1 }}</div>
       <div class="mt-1 font-semibold text-sm">{{ s.label }}</div>
@@ -19,8 +19,10 @@ defineProps<{
       <span
         v-if="i < steps.length - 1"
         class="absolute top-1/2 -right-[10px] text-base"
-        :class="accent === 'heat' ? 'text-[#ff3aa8]' : 'text-[#9a4bff]'"
-        style="transform: translateY(-50%)"
+        :style="{
+          transform: 'translateY(-50%)',
+          color: accent === 'heat' ? 'var(--mandala-c, #e73cff)' : 'var(--mandala-b, #9a4bff)',
+        }"
       >
         →
       </span>

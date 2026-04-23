@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: SVG Repo (Atlassian Jira). Palette shifted to a lighter cyan-blue ramp so the mark pops on the near-black deck canvas. -->
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+  <defs>
+    <linearGradient x1="98%" y1="0%" x2="58%" y2="41%" id="jira-g1">
+      <stop stop-color="#2684FF" offset="18%"/>
+      <stop stop-color="#6AB1FF" offset="100%"/>
+    </linearGradient>
+    <linearGradient x1="100%" y1="0%" x2="55%" y2="45%" id="jira-g2">
+      <stop stop-color="#2684FF" offset="18%"/>
+      <stop stop-color="#6AB1FF" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path d="M244.66,0 L121.71,0 C121.71,14.72 127.55,28.84 137.96,39.25 C148.37,49.65 162.49,55.5 177.21,55.5 L199.86,55.5 L199.86,77.37 C199.88,107.99 224.7,132.82 255.32,132.84 L255.32,10.67 C255.32,4.78 250.55,0 244.66,0 Z" fill="#4FA3FF"/>
+    <path d="M183.82,61.26 L60.87,61.26 C60.89,91.89 85.71,116.71 116.34,116.73 L138.99,116.73 L138.99,138.67 C139.03,169.29 163.86,194.1 194.49,194.1 L194.49,71.93 C194.49,66.04 189.71,61.26 183.82,61.26 Z" fill="url(#jira-g1)"/>
+    <path d="M122.95,122.49 L0,122.49 C0,153.14 24.85,177.99 55.5,177.99 L78.22,177.99 L78.22,199.86 C78.24,230.46 103.02,255.27 133.62,255.32 L133.62,133.16 C133.62,127.26 128.84,122.49 122.95,122.49 Z" fill="url(#jira-g2)"/>
+  </g>
+</svg>

@@ -34,7 +34,7 @@ const toneMap: Record<string, string> = {
         </li>
       </ul>
       <div v-if="p.stack" class="flex flex-wrap gap-1 mt-auto">
-        <span v-for="s in p.stack" :key="s" class="rider-chip">{{ s }}</span>
+        <span v-for="s in p.stack" :key="s" class="rider-chip rider-chip--tag">{{ s }}</span>
       </div>
     </div>
   </div>

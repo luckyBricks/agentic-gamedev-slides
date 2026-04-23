@@ -25,7 +25,7 @@ const toneMap: Record<string, string> = {
     >
       <div class="flex items-baseline justify-between">
         <span class="text-[10px] tracking-[0.28em] uppercase rider-muted">Demo {{ d.num }}</span>
-        <span class="rider-chip">{{ d.audience }}</span>
+        <span class="rider-chip rider-chip--tag">{{ d.audience }}</span>
       </div>
       <div class="mt-2 text-sm font-semibold leading-snug">{{ d.title }}</div>
     </div>

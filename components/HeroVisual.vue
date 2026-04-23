@@ -10,8 +10,6 @@ const agents = [
 <template>
   <div class="relative w-full h-[340px] rounded-2xl overflow-hidden rider-card">
     <div class="rider-grid-lines" />
-    <div class="rider-glow-ring" style="width:360px;height:360px;background:#9a4bff;top:-120px;left:-80px" />
-    <div class="rider-glow-ring" style="width:300px;height:300px;background:#ff3aa8;bottom:-100px;right:-60px" />
 
     <div class="absolute inset-6 flex flex-col">
       <div class="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] rider-muted">
@@ -24,19 +22,20 @@ const agents = [
       </div>
 
       <div class="mt-4 grid grid-cols-5 gap-3 flex-1">
-        <div class="col-span-2 rider-card p-3 text-[11px] font-mono leading-5">
+        <div class="col-span-2 relative rider-card p-3 text-[11px] font-mono leading-5 overflow-hidden">
           <div class="rider-muted mb-1">PlayerController.cs</div>
           <div><span class="text-[#ff7a3c]">public</span> <span class="text-[#3ad9ff]">void</span> <span class="text-white">Dash</span>()</div>
           <div class="opacity-70 pl-3">// engine-aware AI edits</div>
           <div class="pl-3"><span class="text-[#e73cff]">rb</span>.<span class="text-[#ffb547]">AddForce</span>(dir * power);</div>
+          <div class="rider-scanline" />
         </div>
         <div class="col-span-2 rider-card p-3 text-[11px] leading-5">
           <div class="rider-muted mb-1 uppercase tracking-widest text-[9px]">Engine Context</div>
           <div class="flex flex-wrap gap-1.5">
-            <span class="rider-chip">Unity Prefab</span>
-            <span class="rider-chip">Blueprint</span>
-            <span class="rider-chip">Shader</span>
-            <span class="rider-chip">Perforce</span>
+            <span class="rider-chip rider-chip--tag">Unity Prefab</span>
+            <span class="rider-chip rider-chip--tag">Blueprint</span>
+            <span class="rider-chip rider-chip--tag">Shader</span>
+            <span class="rider-chip rider-chip--tag">Perforce</span>
           </div>
           <div class="mt-3 text-[10px] rider-subtle">Index · Symbols · Flow · Dependencies</div>
         </div>
@@ -50,14 +49,12 @@ const agents = [
       </div>
 
       <div class="mt-3 flex items-center gap-2 text-[10px] uppercase tracking-[0.18em]">
-        <span class="rider-chip">Human Workspace</span>
+        <span class="rider-chip rider-chip--tag">Human Workspace</span>
         <span class="flex-1 rider-divider" />
-        <span class="rider-chip">Agent Runtime</span>
+        <span class="rider-chip rider-chip--tag">Agent Runtime</span>
         <span class="flex-1 rider-divider" />
-        <span class="rider-chip">Quality &amp; Governance</span>
+        <span class="rider-chip rider-chip--tag">Quality &amp; Governance</span>
       </div>
     </div>
-
-    <div class="rider-scanline" />
   </div>
 </template>

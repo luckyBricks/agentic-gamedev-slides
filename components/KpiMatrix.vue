@@ -43,7 +43,7 @@ const toneMap: Record<string, string> = {
       <div class="mt-3 flex flex-col gap-2">
         <div v-for="k in g.kpis" :key="k.label" class="flex items-baseline justify-between">
           <span class="text-xs rider-subtle">{{ k.label }}</span>
-          <span class="rider-chip">{{ k.unit }}</span>
+          <span class="rider-chip rider-chip--tag">{{ k.unit }}</span>
         </div>
       </div>
     </div>

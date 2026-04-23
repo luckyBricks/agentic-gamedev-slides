@@ -14,9 +14,8 @@ const radius = 140
 
 <template>
   <div class="relative w-full h-[340px] flex items-center justify-center">
-    <div class="rider-glow-ring" style="width:360px;height:360px;background:#9a4bff" />
-    <div class="absolute w-[260px] h-[260px] rounded-full border border-[#9a4bff55]" />
-    <div class="absolute w-[200px] h-[200px] rounded-full border border-[#e73cff33]" />
+    <div class="absolute w-[260px] h-[260px] rounded-full border border-white/10" />
+    <div class="absolute w-[200px] h-[200px] rounded-full border border-white/5" />
 
     <div class="rider-card rider-card--accent px-5 py-3 font-semibold text-center">
       <div class="text-[10px] tracking-[0.3em] uppercase rider-muted">Shared IDE</div>
@@ -38,7 +37,7 @@ const radius = 140
       </div>
     </div>
 
-    <div class="absolute left-3 top-3 rider-chip">Human</div>
-    <div class="absolute right-3 bottom-3 rider-chip">Agent</div>
+    <div class="absolute left-3 top-3 rider-chip rider-chip--tag">Human</div>
+    <div class="absolute right-3 bottom-3 rider-chip rider-chip--tag">Agent</div>
   </div>
 </template>

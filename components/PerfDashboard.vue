@@ -22,14 +22,14 @@ const rows = [
             :style="{
               height: 8 + Math.abs(Math.sin(idx * (r.title.length % 3 + 0.7))) * 18 + 'px',
               background: idx % 4 === 0
-                ? 'linear-gradient(180deg,#ff3aa8,#ff7a3c)'
-                : 'linear-gradient(180deg,#9a4bff,#3ad9ff)',
+                ? 'linear-gradient(180deg, var(--mandala-c, #ff3aa8), var(--mandala-b, #ff7a3c))'
+                : 'linear-gradient(180deg, var(--mandala-a, #9a4bff), var(--mandala-b, #3ad9ff))',
             }"
           />
         </div>
       </div>
       <div class="mt-2 flex gap-2 flex-wrap">
-        <span v-for="it in r.items" :key="it" class="rider-chip">{{ it }}</span>
+        <span v-for="it in r.items" :key="it" class="rider-chip rider-chip--tag">{{ it }}</span>
       </div>
     </div>
   </div>

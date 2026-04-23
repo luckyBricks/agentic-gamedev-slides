@@ -6,8 +6,6 @@ interface Frontmatter {
   mandala?: 'right' | 'left' | 'center' | 'hidden'
   mandalaOpacity?: number
   mandalaVariant?: 'default' | 'wide'
-  page?: number | string
-  total?: number | string
   product?: string
   badgeLabel?: string
   badgeSub?: string
@@ -22,11 +20,10 @@ const showMandala = computed(() => mandalaPos.value !== 'hidden')
 
 <template>
   <div :class="['rider-slide', 'rider-slide--cover', chapterClass]" class="relative w-full h-full overflow-hidden">
-    <Mandala
+    <DotUltimateBg
       v-if="showMandala"
-      :position="mandalaPos"
+      :position="mandalaPos === 'hidden' ? 'right' : mandalaPos"
       :opacity="frontmatter?.mandalaOpacity ?? 1"
-      :variant="frontmatter?.mandalaVariant ?? 'wide'"
     />
 
     <div class="rider-cover-jb absolute top-[26px] left-[48px] z-20">
@@ -43,13 +40,26 @@ const showMandala = computed(() => mandalaPos.value !== 'hidden')
       <slot />
     </div>
 
-    <PageNumber v-if="frontmatter?.page !== undefined" :index="frontmatter.page" :total="frontmatter?.total" />
+    <PageNumber />
   </div>
 </template>
 
 <style scoped>
 .rider-slide {
   padding: 48px 56px 40px 56px;
-  color: #ffffff;
+  color: #ffffff !important;
+  background: #050510 !important;
+}
+
+.rider-slide :deep(h1),
+.rider-slide :deep(h2),
+.rider-slide :deep(h3),
+.rider-slide :deep(h4),
+.rider-slide :deep(p),
+.rider-slide :deep(li),
+.rider-slide :deep(span),
+.rider-slide :deep(div),
+.rider-slide :deep(strong) {
+  color: inherit;
 }
 </style>

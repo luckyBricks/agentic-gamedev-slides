@@ -1,0 +1,57 @@
+<svg class="background" width="1920" height="1920" viewBox="0 0 1920 1920" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+    <rect width="1920" height="1920" fill="black"/>
+    <g transform="translate(0 0)">
+        <use href="#circle" transform="rotate(-180 1020 1020)"/>
+        <use href="#circle" transform="rotate(-160 1020 1020)"/>
+        <use href="#circle" transform="rotate(-140 1020 1020)"/>
+        <use href="#circle" transform="rotate(-120 1020 1020)"/>
+        <use href="#circle" transform="rotate(-100 1020 1020)"/>
+        <use href="#circle" transform="rotate(-80 1020 1020)"/>
+        <use href="#circle" transform="rotate(-60 1020 1020)"/>
+        <use href="#circle" transform="rotate(-40 1020 1020)"/>
+        <use href="#circle" transform="rotate(-20 1020 1020)"/>
+        <use href="#circle" transform="rotate(0 1020 1020)"/>
+        <use href="#circle" transform="rotate(20 1020 1020)"/>
+        <use href="#circle" transform="rotate(40 1020 1020)"/>
+        <use href="#circle" transform="rotate(60 1020 1020)"/>
+        <use href="#circle" transform="rotate(80 1020 1020)"/>
+        <use href="#circle" transform="rotate(100 1020 1020)"/>
+        <use href="#circle" transform="rotate(120 1020 1020)"/>
+        <use href="#circle" transform="rotate(140 1020 1020)"/>
+        <use href="#circle" transform="rotate(160 1020 1020)"/>
+    </g>
+    <defs>
+        <symbol id="circle">
+            <circle cx="1200" cy="1280" r="320" fill="url(#gradient)" opacity="1" transform-origin="1600 1600">
+                <animateTransform attributeName="transform" type="rotate" values="-16; 8;" dur="2.2s" begin="0ms"
+                                  keySplines="0.32 1 0.67 1" additive="sum" fill="freeze" calcMode="spline"/>
+            </circle>
+        </symbol>
+        <radialGradient id="gradient" gradientTransform="translate(-0.22 -0.22) scale(1.42)">
+            <stop offset="0.65" stop-color="#6B57FF" stop-opacity="0"/>
+            <stop offset="0.7" stop-color="#6C55FE" stop-opacity="0.01"/>
+            <stop offset="0.74" stop-color="#7151FE" stop-opacity="0.06"/>
+            <stop offset="0.78" stop-color="#794AFC" stop-opacity="0.13"/>
+            <stop offset="0.82" stop-color="#8540FB" stop-opacity="0.23"/>
+            <stop offset="0.86" stop-color="#9334F8" stop-opacity="0.36"/>
+            <stop offset="0.89" stop-color="#A524F6" stop-opacity="0.52"/>
+            <stop offset="0.91" stop-color="#AF1DF5" stop-opacity="0.6"/>
+            <stop offset="0.93" stop-color="#C628F2" stop-opacity="0.72"/>
+            <stop offset="0.98" stop-color="#EE3CEE" stop-opacity="0.92"/>
+            <stop offset="1" stop-color="#FF45ED"/>
+
+            <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="gradientTransform" type="translate"
+                              from="-0.22 -0.22" to="-0.18 -0.18" dur="1s" additive="replace" fill="freeze"/>
+            <animateTransform
+                    attributeName="gradientTransform"
+                    type="scale"
+                    from="1.42"
+                    to="1.2"
+                    dur="1s"
+                    additive="sum"
+                    fill="freeze"
+            />
+        </radialGradient>
+    </defs>
+</svg>

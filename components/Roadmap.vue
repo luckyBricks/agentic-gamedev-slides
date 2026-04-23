@@ -47,7 +47,7 @@ const toneMap: Record<string, string> = {
       <div class="mt-3">
         <div class="text-[10px] uppercase tracking-[0.22em] rider-muted">Enable</div>
         <div class="mt-1 flex flex-wrap gap-1.5">
-          <span v-for="c in p.capabilities" :key="c" class="rider-chip">{{ c }}</span>
+          <span v-for="c in p.capabilities" :key="c" class="rider-chip rider-chip--tag">{{ c }}</span>
         </div>
       </div>
       <div class="mt-3">

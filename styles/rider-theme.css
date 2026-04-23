@@ -62,14 +62,19 @@
 
 html,
 html.dark {
-  background: var(--rider-bg);
-  color: var(--rider-ink);
+  background: var(--rider-bg) !important;
+  color: var(--rider-ink) !important;
 }
 
-/* Flat canvas. The mandala does the atmospheric work. */
+body {
+  background: var(--rider-bg) !important;
+}
+
+/* Flat canvas. The mandala does the atmospheric work.
+   !important overrides the default Slidev theme to enforce the dark JetBrains palette. */
 .slidev-layout {
-  background: var(--rider-bg);
-  color: var(--rider-ink);
+  background: var(--rider-bg) !important;
+  color: var(--rider-ink) !important;
   font-family: 'Inter', -apple-system, system-ui, 'Segoe UI', Roboto, Ubuntu, sans-serif;
   padding: 48px 56px;
 }
@@ -78,9 +83,9 @@ html.dark {
 .slidev-layout h2,
 .slidev-layout h3,
 .slidev-layout h4 {
-  color: var(--rider-ink);
+  color: var(--rider-ink) !important;
   letter-spacing: -0.015em;
-  font-weight: 800;
+  font-weight: 800 !important;
 }
 
 .slidev-layout h1 {
@@ -89,9 +94,20 @@ html.dark {
 }
 
 .slidev-layout p,
+.slidev-layout li,
+.slidev-layout span,
+.slidev-layout div {
+  color: inherit;
+}
+
+.slidev-layout p,
 .slidev-layout li {
   font-size: 16px;
   line-height: 1.5;
+}
+
+.slidev-layout strong {
+  color: var(--rider-ink);
 }
 
 .slidev-layout a {
@@ -231,21 +247,7 @@ html.dark {
   text-transform: uppercase;
 }
 
-/* ------- Page number (italic serif, bottom-right) ------- */
-
-.rider-pagenumber {
-  position: absolute;
-  bottom: 22px;
-  right: 32px;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-style: italic;
-  font-size: 15px;
-  color: var(--rider-ink-muted);
-  z-index: 15;
-  pointer-events: none;
-}
-
-/* ------- Mandala wrapper ------- */
+/* ------- Mandala wrapper (legacy, kept for direct use) ------- */
 
 .rider-mandala {
   position: absolute;
@@ -271,6 +273,61 @@ html.dark {
 
 .rider-mandala--subtle {
   opacity: 0.55;
+}
+
+/* ------- dotUltimate animated background ------- */
+
+/*
+ * Sizing rationale (16:9 canvas 1280×720, 100vh ≈ 720 canvas-px):
+ *   - Target: 3/4 hemisphere visible, covering ~60% of slide width (768px).
+ *   - Orb diameter = 768 * 4/3 = 1024 canvas-px  → radius = 512 px.
+ *   - Orb in SVG coords spans ~1272 units (flower radius ≈ 636 units).
+ *   - Required SVG display size = 1920 * (1024/1272) ≈ 1546 canvas-px ≈ 215vh.
+ *   - Center of orb (SVG x=1020) placed at slide x ≈ 1024 (80% from left).
+ *   - right: -37% → SVG right edge at 1280 + 37%×1280 ≈ 1754 px,
+ *     SVG left ≈ 206 px, orb center ≈ 1024 px. ✓
+ *   - Slide overflow:hidden clips ≈ 25% of orb (right quarter) + top/bottom arc
+ *     → produces a clean three-quarter hemisphere silhouette.
+ */
+
+.dot-ultimate-bg {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  filter: hue-rotate(var(--du-hue, 0deg)) saturate(1.05);
+}
+
+.dot-ultimate-bg--right {
+  top: 50%;
+  right: -37%;
+  width: 215vh;
+  height: 215vh;
+  transform: translateY(-50%);
+}
+
+.dot-ultimate-bg--left {
+  top: 50%;
+  /* center (SVG x=1020, ≈53% of 215vh) placed at slide x≈256px so 1/4 bleeds off left */
+  left: -44%;
+  width: 215vh;
+  height: 215vh;
+  transform: translateY(-50%);
+}
+
+.dot-ultimate-bg--center {
+  top: 50%;
+  left: 50%;
+  width: 215vh;
+  height: 215vh;
+  transform: translate(-50%, -50%);
+}
+
+/* corner-br: smaller accent orb in bottom-right corner (~35% coverage) */
+.dot-ultimate-bg--corner-br {
+  bottom: -28%;
+  right: -28%;
+  width: 120vh;
+  height: 120vh;
 }
 
 /* ------- Cards ------- */
@@ -469,32 +526,43 @@ html.dark {
 
 /* ------- Chapter palette variants (apply to slide root) ------- */
 
+/*
+ * --du-hue: CSS hue-rotate value applied to the DotUltimateBg SVG.
+ * The original SVG colors are purple→magenta (hue ~248°–306°).
+ * Rotating shifts the entire orb to the chapter's color family.
+ */
+
 .rider-chapter--violet {
   --mandala-a: #6c3bff;
   --mandala-b: #9a4bff;
   --mandala-c: #e73cff;
+  --du-hue: 0deg;          /* original purple/magenta */
 }
 
 .rider-chapter--cyan {
   --mandala-a: #2d6ef0;
   --mandala-b: #22b8c0;
   --mandala-c: #3ad9ff;
+  --du-hue: -90deg;        /* purple → blue/cyan */
 }
 
 .rider-chapter--amber {
   --mandala-a: #ffb700;
   --mandala-b: #ff9419;
   --mandala-c: #ff0a67;
+  --du-hue: 130deg;        /* purple → orange/amber */
 }
 
 .rider-chapter--green {
   --mandala-a: #22b8c0;
   --mandala-b: #48e054;
   --mandala-c: #a6f25c;
+  --du-hue: 210deg;        /* purple → teal/green */
 }
 
 .rider-chapter--magenta {
   --mandala-a: #7256ff;
   --mandala-b: #ff2d90;
   --mandala-c: #ff8200;
+  --du-hue: 30deg;         /* purple → hot pink/magenta */
 }

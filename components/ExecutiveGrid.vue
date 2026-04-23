@@ -24,7 +24,7 @@ const toneMap: Record<string, string> = {
       <div class="text-[10px] uppercase tracking-[0.28em] rider-muted">Outcome</div>
       <div class="text-lg font-semibold mt-0.5">{{ c.title }}</div>
       <div class="mt-2 flex flex-wrap gap-1.5">
-        <span v-for="t in c.tags" :key="t" class="rider-chip">{{ t }}</span>
+        <span v-for="t in c.tags" :key="t" class="rider-chip rider-chip--tag">{{ t }}</span>
       </div>
     </div>
   </div>
