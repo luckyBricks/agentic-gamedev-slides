@@ -314,26 +314,28 @@ page: 9
     <div class="mt-4 space-y-3 text-[12.5px] leading-relaxed text-white/55">
       <div class="flex gap-2">
         <span class="text-white/25 mt-1 text-[10px] flex-shrink-0">●</span>
-        <p>Issue from
+        <p>Any source —
           <img src="/docs/brand-assets/YouTrack/YouTrack_icon.svg" class="h-3.5 inline align-[-2px]" />
-          <span class="text-white/65">YouTrack</span>
-          <span class="text-white/30 mx-1">or</span>
+          <span class="text-white/65">YouTrack</span>,
           <img src="/docs/brand-assets/jira.svg" class="h-3 inline align-[-2px]" />
-          <span class="text-white/50">Jira</span>
-          — bug, feature, or engine upgrade task
+          <span class="text-white/50">Jira</span>,
+          GitHub Issues, Slack, or <Highlight>any MCP connector</Highlight>
         </p>
       </div>
       <div class="flex gap-2">
         <span class="text-white/25 mt-1 text-[10px] flex-shrink-0">●</span>
-        <p>Rider maps full impact surface: symbol graph, call-chain, dep tree. <Highlight>Generic AI skips this.</Highlight></p>
+        <p>
+          <img src="/docs/brand-assets/Rider/Rider_icon.svg" class="h-3.5 inline align-[-2px]" />
+          <span class="text-white/65">Rider</span> is the hub — any <Highlight>ACP agent or IntelliJ plugin</Highlight> acts with full IDE context; blast radius mapped before a line is changed
+        </p>
       </div>
       <div class="flex gap-2">
         <span class="text-white/25 mt-1 text-[10px] flex-shrink-0">●</span>
-        <p>Reviewable plan with scope, risk flags, and validation checklist — before any code is written</p>
+        <p>Agent output produces a reviewable plan <em>and</em> enriches the <Highlight>enterprise knowledge base</Highlight> — compounding team intelligence with every resolved issue</p>
       </div>
     </div>
     <div class="mt-5 text-[12px] text-white/45">
-      <TipChip /> Starts with <em>understanding</em>, not coding.
+      <TipChip /> First step: <em>understanding</em>. Last step: <em>knowledge capture</em>.
     </div>
   </div>
   <!-- Right: primary — the flow diagram -->
@@ -343,10 +345,15 @@ page: 9
 </div>
 
 <!--
-Emphasize: true professional agentic workflow's first step is not coding but understanding.
-YouTrack is JetBrains' native issue tracker — VCS-linked issues, commits, and branches in one view.
-Jira integration means studios don't need to switch tools; Rider reads the same context.
-The impact analysis step is the critical differentiator — generic AI agents jump straight to code generation, which leads to plan rework and missed blast radius.
+Emphasize: professional agentic workflows start with understanding and end with knowledge capture — not just a merged commit.
+
+Input sources: YouTrack (native VCS-linked), Jira, GitHub Issues, Slack/chat, or any custom MCP connector — Rider unifies them all into one context. Studios don't need to abandon existing tools.
+
+Rider is the hub, not just an editor. Any ACP-compatible agent or IntelliJ plugin can act within the same full-project semantic context — Junie, Claude Code, Codex, or future agents you haven't deployed yet.
+
+Impact analysis is the critical differentiator: generic AI agents jump straight to code generation, which leads to plan rework and missed blast radius. Rider maps the full change surface before a line is written.
+
+Knowledge feedback loop: agent resolution output should feed back into the enterprise knowledge base — resolution logs, learned patterns, and documentation entries. This compounds team intelligence over time and guides future engineers and agents on similar problems.
 -->
 
 ---
