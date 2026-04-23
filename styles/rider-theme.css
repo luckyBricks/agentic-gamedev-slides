@@ -1,11 +1,45 @@
+/*
+ * JetBrains .NET / GameDev — Rider Agentic GameDev deck theme.
+ * Design reference: DESIGN.md + temp/Rider 功能速览 2026.1 Promo (1).pdf
+ *
+ * Key principles from the reference deck:
+ * - Flat near-black canvas. All ambient color comes from the chapter-tinted mandala.
+ * - Pure white text. No gradient washes under body copy.
+ * - Red-underline kicker is the primary section label.
+ * - Solid chips: Junie-pink Tip, Qodana-green Beta/New.
+ * - Yellow marker highlight for single technical terms.
+ * - Corner badge (Rider icon + JETBRAINS IDE) top-right; italic serif page number bottom-right.
+ */
+
 :root {
-  --rider-bg: #0b0616;
-  --rider-bg-2: #140a28;
+  /* Canvas */
+  --rider-bg: #050510;
+  --rider-bg-2: #0b0616;
+
+  /* Ink */
+  --rider-ink: #ffffff;
+  --rider-ink-dim: rgba(255, 255, 255, 0.72);
+  --rider-ink-muted: rgba(255, 255, 255, 0.5);
+  --rider-ink-faint: rgba(255, 255, 255, 0.28);
+
+  /* Surface */
   --rider-panel: rgba(255, 255, 255, 0.04);
-  --rider-panel-border: rgba(255, 255, 255, 0.08);
-  --rider-ink: #ecebff;
-  --rider-ink-dim: rgba(236, 235, 255, 0.72);
-  --rider-ink-muted: rgba(236, 235, 255, 0.5);
+  --rider-panel-strong: rgba(255, 255, 255, 0.08);
+  --rider-panel-border: rgba(255, 255, 255, 0.1);
+
+  /* Authoritative brand anchors (from docs/brand-assets) */
+  --rider-blue: #007dfe;
+  --rider-amber-brand: #ffb700;
+  --rider-red: #ff0a67;
+  --junie-violet: #7256ff;
+  --junie-pink: #ff2d90;
+  --junie-orange: #ff8200;
+  --qodana-green: #48e054;
+  --ai-orange: #ff9419;
+  --ai-red: #ff021d;
+  --ai-magenta: #e600ff;
+
+  /* Working palette (mandala + accents) */
   --rider-indigo: #6c3bff;
   --rider-violet: #9a4bff;
   --rider-magenta: #e73cff;
@@ -13,21 +47,31 @@
   --rider-orange: #ff7a3c;
   --rider-amber: #ffb547;
   --rider-cyan: #3ad9ff;
-  --slidev-theme-primary: #9a4bff;
+  --rider-teal: #22b8c0;
+
+  /* Utility */
+  --rider-highlight: #ffe55e;
+
+  /* Current chapter mandala color (overridden per slide) */
+  --mandala-a: #6c3bff;
+  --mandala-b: #9a4bff;
+  --mandala-c: #e73cff;
+
+  --slidev-theme-primary: #e73cff;
 }
 
-html.dark,
-html {
+html,
+html.dark {
   background: var(--rider-bg);
   color: var(--rider-ink);
 }
 
+/* Flat canvas. The mandala does the atmospheric work. */
 .slidev-layout {
-  background:
-    radial-gradient(1200px 800px at 85% -10%, rgba(231, 60, 255, 0.18), transparent 60%),
-    radial-gradient(900px 600px at -10% 110%, rgba(108, 59, 255, 0.22), transparent 60%),
-    linear-gradient(180deg, var(--rider-bg) 0%, var(--rider-bg-2) 100%);
+  background: var(--rider-bg);
   color: var(--rider-ink);
+  font-family: 'Inter', -apple-system, system-ui, 'Segoe UI', Roboto, Ubuntu, sans-serif;
+  padding: 48px 56px;
 }
 
 .slidev-layout h1,
@@ -35,65 +79,208 @@ html {
 .slidev-layout h3,
 .slidev-layout h4 {
   color: var(--rider-ink);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
+  font-weight: 800;
 }
 
 .slidev-layout h1 {
-  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.08;
 }
 
-.slidev-layout code {
-  color: #f2e6ff;
+.slidev-layout p,
+.slidev-layout li {
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .slidev-layout a {
   color: var(--rider-magenta);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(231, 60, 255, 0.4);
 }
 
-.rider-gradient-text {
-  background: linear-gradient(90deg, #ff3aa8 0%, #e73cff 35%, #9a4bff 70%, #3ad9ff 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+.slidev-layout code {
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  color: #f2e6ff;
 }
 
-.rider-heat-text {
-  background: linear-gradient(90deg, #ffb547 0%, #ff7a3c 30%, #ff3aa8 65%, #9a4bff 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+.slidev-layout ul > li::marker {
+  content: '';
 }
+
+.slidev-layout ul > li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
+
+.slidev-layout ul > li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid var(--rider-ink-dim);
+  border-radius: 1px;
+  transform: rotate(0deg);
+}
+
+/* ------- Kicker: red-underlined section label ------- */
+
+.rider-kicker {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--rider-ink);
+  text-decoration: underline solid var(--rider-red);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+  margin-bottom: 14px;
+}
+
+/* ------- Chips ------- */
 
 .rider-chip {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.2rem 0.65rem;
-  border-radius: 999px;
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border: 1px solid rgba(154, 75, 255, 0.45);
-  background: linear-gradient(90deg, rgba(231, 60, 255, 0.18), rgba(108, 59, 255, 0.18));
-  color: #f6e8ff;
+  gap: 6px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
-.rider-divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(231, 60, 255, 0.6), rgba(108, 59, 255, 0.6), transparent);
-  border: 0;
+.rider-chip--tip {
+  background: var(--junie-pink);
+  color: #ffffff;
 }
+
+.rider-chip--status {
+  background: var(--qodana-green);
+  color: #000000;
+}
+
+.rider-chip--neutral {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--rider-ink);
+  font-weight: 600;
+}
+
+.rider-chip--tag {
+  background: transparent;
+  color: var(--rider-ink-dim);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  font-weight: 600;
+}
+
+/* ------- Yellow highlighter ------- */
+
+.rider-highlight {
+  background: var(--rider-highlight);
+  color: #111;
+  padding: 1px 4px;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+/* ------- Corner badge (top-right Rider lockup) ------- */
+
+.rider-corner-badge {
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.rider-corner-badge__icon {
+  width: 34px;
+  height: 34px;
+}
+
+.rider-corner-badge__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.rider-corner-badge__label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--rider-ink);
+  letter-spacing: -0.01em;
+}
+
+.rider-corner-badge__sub {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  color: var(--rider-ink-dim);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* ------- Page number (italic serif, bottom-right) ------- */
+
+.rider-pagenumber {
+  position: absolute;
+  bottom: 22px;
+  right: 32px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--rider-ink-muted);
+  z-index: 15;
+  pointer-events: none;
+}
+
+/* ------- Mandala wrapper ------- */
+
+.rider-mandala {
+  position: absolute;
+  top: 50%;
+  right: -28%;
+  width: 115vh;
+  height: 115vh;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.92;
+}
+
+.rider-mandala--left {
+  right: auto;
+  left: -28%;
+}
+
+.rider-mandala--center {
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+.rider-mandala--subtle {
+  opacity: 0.55;
+}
+
+/* ------- Cards ------- */
 
 .rider-card {
   position: relative;
-  padding: 1rem 1.1rem;
+  padding: 14px 16px;
   border-radius: 14px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
+  background: var(--rider-panel);
   border: 1px solid var(--rider-panel-border);
-  box-shadow: 0 10px 40px -20px rgba(154, 75, 255, 0.45);
-  backdrop-filter: blur(6px);
 }
 
 .rider-card--accent::before {
@@ -102,7 +289,7 @@ html {
   inset: 0;
   border-radius: 14px;
   padding: 1px;
-  background: linear-gradient(135deg, #ff3aa8, #9a4bff 55%, #3ad9ff);
+  background: linear-gradient(135deg, var(--mandala-c), var(--mandala-b) 55%, var(--mandala-a));
   mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
@@ -110,83 +297,45 @@ html {
   pointer-events: none;
 }
 
-.rider-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #ff3aa8, #9a4bff);
-  box-shadow: 0 0 10px rgba(231, 60, 255, 0.6);
+.rider-card--dark {
+  background: #0e0a1a;
+  border-color: rgba(255, 255, 255, 0.06);
 }
+
+/* ------- Keyboard hint ------- */
 
 .rider-kbd {
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  font-size: 0.78rem;
-  padding: 0.1rem 0.45rem;
-  border-radius: 6px;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 5px;
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--rider-ink);
 }
 
-.rider-scanline {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    repeating-linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.02) 0px,
-      rgba(255, 255, 255, 0.02) 1px,
-      transparent 1px,
-      transparent 3px
-    );
-  mix-blend-mode: screen;
-  opacity: 0.4;
-}
-
-.rider-glow-ring {
-  position: absolute;
-  border-radius: 999px;
-  filter: blur(60px);
-  opacity: 0.7;
-  pointer-events: none;
-}
-
-.rider-footer {
-  position: absolute;
-  bottom: 18px;
-  left: 32px;
-  right: 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.7rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--rider-ink-muted);
-  z-index: 10;
-}
+/* ------- Pipeline ------- */
 
 .rider-pipeline {
   display: grid;
-  gap: 0.75rem;
+  gap: 12px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  align-items: stretch;
 }
 
 .rider-pipeline__node {
   position: relative;
-  padding: 0.9rem 0.8rem;
+  padding: 14px 12px;
   border-radius: 12px;
-  background: linear-gradient(180deg, rgba(154, 75, 255, 0.16), rgba(58, 217, 255, 0.06));
-  border: 1px solid rgba(154, 75, 255, 0.3);
-  color: var(--rider-ink);
+  background: linear-gradient(180deg, rgba(154, 75, 255, 0.18), rgba(58, 217, 255, 0.06));
+  border: 1px solid rgba(154, 75, 255, 0.32);
   text-align: center;
-  font-size: 0.82rem;
+  font-size: 13px;
+  color: var(--rider-ink);
 }
 
 .rider-pipeline__node--gate {
-  background: linear-gradient(180deg, rgba(255, 58, 168, 0.22), rgba(255, 122, 60, 0.15));
-  border-color: rgba(255, 58, 168, 0.6);
+  background: linear-gradient(180deg, rgba(255, 10, 103, 0.22), rgba(255, 122, 60, 0.14));
+  border-color: rgba(255, 10, 103, 0.5);
 }
 
 .rider-pipeline__node::after {
@@ -196,67 +345,156 @@ html {
   right: -14px;
   width: 14px;
   height: 2px;
-  background: linear-gradient(90deg, rgba(154, 75, 255, 0.8), rgba(58, 217, 255, 0.4));
+  background: rgba(255, 255, 255, 0.22);
   transform: translateY(-50%);
+  z-index: 2;
 }
 
 .rider-pipeline__node:last-child::after {
   display: none;
 }
 
-.rider-grid-lines {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(154, 75, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(154, 75, 255, 0.08) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.9) 20%, transparent 75%);
-  pointer-events: none;
-}
+/* ------- Mockup chrome (used inside HeroVisual) ------- */
 
-.slidev-layout.cover,
-.slidev-layout.cover h1,
-.slidev-layout.cover h2 {
+.rider-mockup {
+  position: relative;
+  border-radius: 12px;
+  background: #0a0814;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  padding: 12px 14px;
   color: var(--rider-ink);
+  font-size: 13px;
 }
 
-.slidev-layout .rider-subtle {
+.rider-mockup__bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
   color: var(--rider-ink-dim);
 }
 
-.slidev-layout .rider-muted {
+/* Scanline texture is OK *inside* a mockup card, not on the slide canvas. */
+.rider-mockup .rider-scanline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  opacity: 0.35;
+}
+
+/* ------- Subtle text utilities ------- */
+
+.rider-subtle {
+  color: var(--rider-ink-dim);
+}
+
+.rider-muted {
   color: var(--rider-ink-muted);
 }
 
-.slidev-layout ul > li::marker {
-  color: var(--rider-magenta);
+.rider-upper {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 11px;
+  font-weight: 600;
 }
+
+.rider-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ------- Reserved gradient voices (cover / act opener only) ------- */
+
+.rider-gradient-text {
+  background: linear-gradient(90deg, var(--rider-pink) 0%, var(--rider-magenta) 35%, var(--rider-violet) 70%, var(--rider-cyan) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.rider-heat-text {
+  background: linear-gradient(90deg, var(--rider-amber) 0%, var(--rider-orange) 30%, var(--rider-pink) 65%, var(--rider-violet) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* ------- Tables ------- */
 
 .slidev-layout table {
   border-collapse: separate;
   border-spacing: 0;
-  border: 1px solid rgba(154, 75, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 10px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.02);
+  font-size: 14px;
 }
 
 .slidev-layout table th {
-  background: linear-gradient(90deg, rgba(231, 60, 255, 0.2), rgba(108, 59, 255, 0.2));
+  background: rgba(255, 255, 255, 0.06);
   color: var(--rider-ink);
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: left;
 }
 
 .slidev-layout table td,
 .slidev-layout table th {
-  border-color: rgba(154, 75, 255, 0.15);
-  padding: 0.45rem 0.85rem;
+  border-color: rgba(255, 255, 255, 0.08);
+  padding: 8px 14px;
 }
 
-.rider-bracket {
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  color: var(--rider-magenta);
-  opacity: 0.6;
+/* ------- Divider ------- */
+
+.rider-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 0;
+}
+
+/* ------- Chapter palette variants (apply to slide root) ------- */
+
+.rider-chapter--violet {
+  --mandala-a: #6c3bff;
+  --mandala-b: #9a4bff;
+  --mandala-c: #e73cff;
+}
+
+.rider-chapter--cyan {
+  --mandala-a: #2d6ef0;
+  --mandala-b: #22b8c0;
+  --mandala-c: #3ad9ff;
+}
+
+.rider-chapter--amber {
+  --mandala-a: #ffb700;
+  --mandala-b: #ff9419;
+  --mandala-c: #ff0a67;
+}
+
+.rider-chapter--green {
+  --mandala-a: #22b8c0;
+  --mandala-b: #48e054;
+  --mandala-c: #a6f25c;
+}
+
+.rider-chapter--magenta {
+  --mandala-a: #7256ff;
+  --mandala-b: #ff2d90;
+  --mandala-c: #ff8200;
 }
