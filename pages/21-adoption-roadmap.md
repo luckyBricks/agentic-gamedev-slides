@@ -5,16 +5,16 @@ page: 21
 ---
 
 <div class="h-full flex flex-col">
-  <Kicker>Value Delivery Plan</Kicker>
+  <Kicker>价值交付计划</Kicker>
   <h1 class="!text-[40px] font-extrabold !leading-tight mt-3">
-    Adoption Roadmap
+    落地路线图
   </h1>
-  <p class="mt-2 text-[15px] text-white/60">Land in phases — no need to rebuild the entire workflow at once.</p>
+  <p class="mt-2 text-[15px] text-white/60">分阶段落地 — 无需一次性重建整套 Workflow。</p>
   <div class="flex-1 mt-4">
     <Roadmap />
   </div>
 </div>
 
 <!--
-Emphasize "internally bold, externally gradual." Start from the most quantifiable touchpoint: pre-merge quality gate and engine-aware implementation. Phase into full agentic studio platform.
+强调「内部敢为，外部渐进」。从最可量化的触点起步：合入前 quality gate 与 engine-aware 实现。再逐步演进为完整的 agentic studio platform。
 -->

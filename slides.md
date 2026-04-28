@@ -17,10 +17,10 @@ chapter: violet
 
 <div class="flex flex-col justify-center h-full max-w-[60%]">
   <h1 class="!text-[72px] font-extrabold !leading-[1.02] !tracking-[-0.02em]">
-    GameDev Solution for <br>Agentic-Driven workflow<br>
+    面向 Agentic-Driven Workflow 的<br>GameDev 解决方案<br>
   </h1>
   <p class="mt-6 text-[20px] text-white/72 italic leading-relaxed">
-    Production-ready solution for Humans and Agents orchestration
+    面向 Humans 与 Agents 协同编排的生产级解决方案
   </p>
   <div class="mt-10 flex items-center gap-3 text-white/50 text-xs tracking-wide">
     <img src="/docs/brand-assets/Rider/dotUltimate.svg" class="h-5 inline" />
@@ -35,10 +35,13 @@ chapter: violet
     <span class="opacity-40">·</span>
     <img src="/docs/brand-assets/AI/AI-white.svg" class="h-4 inline" />
   </div>
+  <p class="mt-10 text-[15px] text-white/10">
+    孙涛 Customer Success Engineer @ JetBrains
+  </p>
 </div>
 
 <!--
-Don't start from features — start from the paradigm shift. The future contest is not over the chat box, but over who controls the context, execution, and verification chain shared by humans and agents.
+不要从功能讲起 — 要从范式转移讲起。未来的竞争不是聊天框之争，而是谁掌控人类与 agent 共享的 context、执行与验证链路。
 -->
 
 ---

@@ -5,18 +5,18 @@ page: 17
 ---
 
 <div class="h-full flex flex-col">
-  <Kicker>Role 3</Kicker>
+  <Kicker>角色 3</Kicker>
   <h1 class="!text-[36px] font-extrabold !leading-tight mt-3">
     Studio Tools / AI Platform / QA / Build &amp; Release
   </h1>
   <div class="flex-1 mt-5">
     <PersonaCards :gradient-bg="true" :personas="[
-      {title: 'Studio Tools & AI Platform', role: 'Process Owner', bullets: ['Turn Rider into the base for internal agents & skills', 'Consolidate studio-specific tooling onto one platform', 'Govern agent capabilities and model access'], stack: ['MCP', 'ACP', 'Junie', 'AI Enterprise'], tone: 'amber'},
-      {title: 'QA & Build / Release', role: 'Process Owner', bullets: ['Pull testing, coverage, static analysis into one pipeline', 'Shorten feedback loops with pre-merge quality gates', 'Protect mainline stability with automated verification'], stack: ['Qodana', 'TeamCity', 'dotCover', 'Perforce'], tone: 'cyan'}
+      {title: 'Studio Tools & AI Platform', role: '流程负责人', bullets: ['把 Rider 变成内部 agent 与 skill 的基座', '把工作室专属工具统合到同一平台', '治理 agent 能力与模型访问权限'], stack: ['MCP', 'ACP', 'Junie', 'AI Enterprise'], tone: 'amber'},
+      {title: 'QA & Build / Release', role: '流程负责人', bullets: ['把测试、覆盖率、静态分析整合到同一条流水线', '通过合入前 quality gate 缩短反馈闭环', '通过自动化校验保护主干稳定'], stack: ['Qodana', 'TeamCity', 'dotCover', 'Perforce'], tone: 'cyan'}
     ]" />
   </div>
 </div>
 
 <!--
-Most important sentence: JetBrains isn't just selling to coders — it's selling to studio platform teams. The value extends beyond programming into delivery infrastructure.
+最关键的一句话：JetBrains 不只是卖给 coder — 它也卖给工作室的平台团队。价值范围从编程延伸到交付基础设施。
 -->

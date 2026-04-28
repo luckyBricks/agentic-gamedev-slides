@@ -10,22 +10,22 @@ page: 8
     <TipChip label="Alpha" class="!bg-sky-300 !text-white" />
   </div>
   <h1 class="!text-[40px] font-extrabold !leading-tight mt-3">
-    Human Request → On-Demand Tool Generation
+    人类需求 → 按需生成工具
   </h1>
-  <p class="mt-2 text-[15px] text-white/60">Many lightweight tools will be agent-generated on-the-fly in shared IDE context.</p>
+  <p class="mt-2 text-[15px] text-white/60">很多轻量工具会由 agent 在共享 IDE context 中即时生成。</p>
   <div class="flex-1 mt-6 flex items-center">
     <WorkflowFlow :steps="[
-      {label: 'Prompt', detail: 'Human request'},
-      {label: 'Context', detail: 'Shared IDE activates'},
-      {label: 'Skill', detail: 'Agent generates tool'},
-      {label: 'Review', detail: 'Human verifies'}
+      {label: 'Prompt', detail: '人类需求'},
+      {label: 'Context', detail: 'Shared IDE 激活'},
+      {label: 'Skill', detail: 'Agent 生成工具'},
+      {label: 'Review', detail: '人类校验'}
     ]" accent="heat" />
   </div>
   <div class="mt-4 text-[14px] text-white/60">
-    <TipChip /> Examples: naming convention checker · pre-upgrade dependency scan · Prefab / Blueprint impact analysis
+    <TipChip /> 示例：命名规范检查 · 升级前依赖扫描 · Prefab / Blueprint 影响分析
   </div>
 </div>
 
 <!--
-In the past we had to develop internal tools for every special need. In the future, many lightweight tools will be agent-generated on-the-fly in shared IDE context. ROI: reduce one-off scripts, manual plugins, and repetitive analysis.
+过去我们为每个特殊需求都得开发内部工具。未来，很多轻量工具会由 agent 在共享 IDE context 中即时生成。ROI：减少一次性脚本、手工插件与重复分析。
 -->

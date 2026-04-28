@@ -6,16 +6,16 @@ mandalaOpacity: 0.5
 ---
 
 <div class="h-full flex flex-col">
-  <Kicker>Appendix A4</Kicker>
+  <Kicker>附录 A4</Kicker>
   <h1 class="!text-[40px] font-extrabold !leading-tight mt-3">
-    KPI Framework
+    KPI 框架
   </h1>
-  <p class="mt-2 text-[14px] text-white/60">Unified metrics for pilot projects — deployment and retrospective.</p>
+  <p class="mt-2 text-[14px] text-white/60">试点项目的统一度量 — 用于部署与复盘。</p>
   <div class="flex-1 mt-4">
     <KpiMatrix />
   </div>
 </div>
 
 <!--
-Don't talk KPI on slide 1. But if pushing purchase or a pilot program, this must be in the appendix. Three categories: Flow, Quality, Adoption.
+不要在第 1 页讲 KPI。但如果要推动采购或试点项目，这页必须放进附录。三类：Flow、Quality、Adoption。
 -->

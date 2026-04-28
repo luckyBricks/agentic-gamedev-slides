@@ -9,7 +9,7 @@ mandalaOpacity: 0.6
   <div>
     <Kicker>Workflow 2</Kicker>
     <h1 class="!text-[36px] font-extrabold !leading-tight mt-2">
-      Gameplay / Feature Implementation
+      Gameplay / 功能实现
     </h1>
   </div>
 
@@ -22,10 +22,10 @@ mandalaOpacity: 0.6
         <StatusChip label="C# + Shader" />
       </div>
       <div class="space-y-1 text-[12px] text-white/80">
-        <p>❏ Profiling hints inline</p>
-        <p>❏ Quick-fixes &amp; inspections</p>
-        <p>❏ Shader file support</p>
-        <p>❏ Unity tests &amp; debugger</p>
+        <p>❏ 内联 profiling 提示</p>
+        <p>❏ Quick-fix 与 inspection</p>
+        <p>❏ Shader 文件支持</p>
+        <p>❏ Unity tests 与 debugger</p>
       </div>
     </div>
     <div class="rider-card px-4 py-3 flex flex-col" style="background: rgba(255,255,255,0.25);">
@@ -35,10 +35,10 @@ mandalaOpacity: 0.6
         <StatusChip label="C++ / BP" />
       </div>
       <div class="space-y-1 text-[12px] text-white/80">
-        <p>❏ Engine-level debugger</p>
-        <p>❏ Mobile / iOS deploy target</p>
-        <p>❏ Macro &amp; Reflection insight</p>
-        <p>❏ Blueprint awareness</p>
+        <p>❏ Engine 级 debugger</p>
+        <p>❏ Mobile / iOS 部署目标</p>
+        <p>❏ Macro 与 Reflection 洞察</p>
+        <p>❏ Blueprint 感知</p>
       </div>
     </div>
     <div class="rider-card px-4 py-3 flex flex-col" style="background: rgba(255,255,255,0.25);">
@@ -48,10 +48,10 @@ mandalaOpacity: 0.6
         <StatusChip label="C# + GDScript" />
       </div>
       <div class="space-y-1 text-[12px] text-white/80">
-        <p>❏ C# language support</p>
-        <p>❏ GDScript navigation</p>
-        <p>❏ Debugging tools</p>
-        <p>❏ Consistent workspace</p>
+        <p>❏ C# 语言支持</p>
+        <p>❏ GDScript 导航</p>
+        <p>❏ 调试工具</p>
+        <p>❏ 一致的工作区</p>
       </div>
     </div>
   </div>
@@ -96,9 +96,9 @@ mandalaOpacity: 0.6
     </div>
   </div>
 
-  <p class="text-center text-[12px] text-white/40 italic shrink-0">Engine-aware context makes AI useful — not just available.</p>
+  <p class="text-center text-[12px] text-white/40 italic shrink-0">Engine-aware context 让 AI 真正有用 — 而不只是可用。</p>
 </div>
 
 <!--
-Use "not any LLM has this context" frequently, but don't speak abstractly — ground it in prefab, Blueprint, shader, tests. Rider isn't a generic editor; it's an engine-aware workspace.
+反复使用「没有任何 LLM 具备这种 context」这一论点，但不要抽象 — 落到 prefab、Blueprint、shader、tests 上。Rider 不是通用编辑器，而是 engine-aware 的工作区。
 -->
