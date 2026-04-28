@@ -6,9 +6,6 @@ interface Frontmatter {
   mandala?: 'right' | 'left' | 'center' | 'hidden'
   mandalaOpacity?: number
   mandalaVariant?: 'default' | 'wide'
-  product?: string
-  badgeLabel?: string
-  badgeSub?: string
 }
 
 const props = defineProps<{ frontmatter?: Frontmatter }>()
@@ -30,11 +27,7 @@ const showMandala = computed(() => mandalaPos.value !== 'hidden')
       <img src="/docs/brand-assets/jetbrains/jetbrains.svg" alt="JetBrains" class="h-8" />
     </div>
 
-    <CornerBadge
-      :product="frontmatter?.product"
-      :label="frontmatter?.badgeLabel"
-      :sub="frontmatter?.badgeSub"
-    />
+    <CornerBadge />
 
     <div class="relative z-10 w-full h-full">
       <slot />

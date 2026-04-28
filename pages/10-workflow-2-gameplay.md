@@ -5,47 +5,49 @@ page: 10
 mandalaOpacity: 0.6
 ---
 
-<div class="h-full flex flex-col">
-  <Kicker>Workflow 2</Kicker>
-  <h1 class="!text-[40px] font-extrabold !leading-tight mt-3">
-    Gameplay / Feature Implementation
-  </h1>
-  <div class="flex-1 mt-5 grid grid-cols-3 gap-5">
-    <div class="rider-card p-5 flex flex-col">
-      <div class="flex items-center gap-2 mb-3">
+<div class="h-full flex flex-col gap-3">
+  <div>
+    <Kicker>Workflow 2</Kicker>
+    <h1 class="!text-[36px] font-extrabold !leading-tight mt-2">
+      Gameplay / Feature Implementation
+    </h1>
+  </div>
+
+  <!-- Engine feature cards -->
+  <div class="grid grid-cols-3 gap-4 shrink-0">
+    <div class="rider-card px-4 py-3 flex flex-col" style="background: rgba(255,255,255,0.25);">
+      <div class="flex items-center gap-2 mb-2">
         <img src="/docs/brand-assets/unity.svg" class="h-5 w-5" alt="Unity" />
-        <span class="text-[17px] font-bold">Unity</span>
+        <span class="text-[15px] font-bold">Unity</span>
         <StatusChip label="C# + Shader" />
       </div>
-      <div class="space-y-2 text-[14px] text-white/80">
+      <div class="space-y-1 text-[12px] text-white/80">
+        <p>❏ Profiling hints inline</p>
         <p>❏ Quick-fixes &amp; inspections</p>
-        <p>❏ Unity tests &amp; debugging</p>
-        <p>❏ Profiling integration</p>
         <p>❏ Shader file support</p>
-        <p>❏ Asset workflow awareness</p>
+        <p>❏ Unity tests &amp; debugger</p>
       </div>
     </div>
-    <div class="rider-card p-5 flex flex-col">
-      <div class="flex items-center gap-2 mb-3">
+    <div class="rider-card px-4 py-3 flex flex-col" style="background: rgba(255,255,255,0.25);">
+      <div class="flex items-center gap-2 mb-2">
         <img src="/docs/brand-assets/unreal-engine.svg" class="h-5 w-5" alt="Unreal" />
-        <span class="text-[17px] font-bold">Unreal</span>
+        <span class="text-[15px] font-bold">Unreal</span>
         <StatusChip label="C++ / BP" />
       </div>
-      <div class="space-y-2 text-[14px] text-white/80">
+      <div class="space-y-1 text-[12px] text-white/80">
+        <p>❏ Engine-level debugger</p>
+        <p>❏ Mobile / iOS deploy target</p>
         <p>❏ Macro &amp; Reflection insight</p>
         <p>❏ Blueprint awareness</p>
-        <p>❏ Engine-level debugger</p>
-        <p>❏ Automation Tests</p>
-        <p>❏ Build file integration</p>
       </div>
     </div>
-    <div class="rider-card p-5 flex flex-col">
-      <div class="flex items-center gap-2 mb-3">
-        <img src="/docs/brand-assets/Godot Engine.svg" class="h-5 w-5" alt="Godot" />
-        <span class="text-[17px] font-bold">Godot</span>
+    <div class="rider-card px-4 py-3 flex flex-col" style="background: rgba(255,255,255,0.25);">
+      <div class="flex items-center gap-2 mb-2">
+        <img src="/docs/brand-assets/godot.svg" class="h-5 w-5" alt="Godot" />
+        <span class="text-[15px] font-bold">Godot</span>
         <StatusChip label="C# + GDScript" />
       </div>
-      <div class="space-y-2 text-[14px] text-white/80">
+      <div class="space-y-1 text-[12px] text-white/80">
         <p>❏ C# language support</p>
         <p>❏ GDScript navigation</p>
         <p>❏ Debugging tools</p>
@@ -53,7 +55,48 @@ mandalaOpacity: 0.6
       </div>
     </div>
   </div>
-  <p class="mt-2 text-center text-[14px] text-white/50 italic">Engine-aware context makes AI useful — not just available.</p>
+
+  <!-- Feature screenshots grid -->
+  <div class="flex-1 grid grid-cols-3 gap-3 min-h-0">
+    <!-- Unity Profiling -->
+    <div class="flex flex-col gap-2 min-h-0">
+      <p class="text-[10px] font-semibold text-white/40 shrink-0">Unity Profiling</p>
+      <div class="flex-1 grid grid-rows-2 gap-2 min-h-0">
+        <div class="overflow-hidden rounded-lg border border-white/10 min-h-0">
+          <img src="/pages/imgs/unity-profiler.png" class="w-full h-full object-cover object-top" />
+        </div>
+        <div class="overflow-hidden rounded-lg border border-white/10 min-h-0">
+          <img src="/pages/imgs/unity-profiler-tool.png" class="w-full h-full object-cover object-center" />
+        </div>
+      </div>
+    </div>
+    <!-- Unreal Mobile Debug -->
+    <div class="flex flex-col gap-2 min-h-0">
+      <p class="text-[10px] font-semibold text-white/40 shrink-0">Unreal Mobile Debug</p>
+      <div class="flex-1 grid grid-rows-2 gap-2 min-h-0">
+        <div class="overflow-hidden rounded-lg border border-white/10 min-h-0">
+          <img src="/pages/imgs/unreal-mobile-debug.png" class="w-full h-full object-cover object-top" />
+        </div>
+        <div class="overflow-hidden rounded-lg border border-white/10 min-h-0">
+          <img src="/pages/imgs/unreal-ios-debug-device.png" class="w-full h-full object-cover object-center" />
+        </div>
+      </div>
+    </div>
+    <!-- Shader Debugging (cross-engine) -->
+    <div class="flex flex-col gap-2 min-h-0">
+      <p class="text-[10px] font-semibold text-white/40 shrink-0">Shader Debugging</p>
+      <div class="flex-1 grid grid-rows-2 gap-2 min-h-0">
+        <div class="overflow-hidden rounded-lg border border-white/10 min-h-0">
+          <img src="/pages/imgs/shader-debug-renderdoc.png" class="w-full h-full object-cover object-top" />
+        </div>
+        <div class="overflow-hidden rounded-lg border border-white/10 min-h-0">
+          <img src="/pages/imgs/shader-debug-static-analysis.png" class="w-full h-full object-cover object-top" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="text-center text-[12px] text-white/40 italic shrink-0">Engine-aware context makes AI useful — not just available.</p>
 </div>
 
 <!--

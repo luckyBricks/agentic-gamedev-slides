@@ -2,6 +2,7 @@
 layout: rider
 chapter: magenta
 page: 3
+transition: slide-up 
 ---
 
 <div class="grid grid-cols-12 gap-8 h-full items-center">

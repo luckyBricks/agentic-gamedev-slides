@@ -1,5 +1,17 @@
 [
     {
+        "name": "slidev builtin CLI",
+        "domain": "https://sli.dev/builtin/cli"
+    },
+    {
+        "name": "slidev builtin components",
+        "domain": "https://sli.dev/builtin/components"
+    },
+    {
+        "name": "slidev builtin layouts",
+        "domain": "https://sli.dev/builtin/layouts"
+    },
+    {
         "name": "slidev guide",
         "domain": "https://sli.dev/guide/"
     }

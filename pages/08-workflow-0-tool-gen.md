@@ -5,7 +5,10 @@ page: 8
 ---
 
 <div class="h-full flex flex-col">
-  <Kicker>Workflow 0</Kicker>
+  <div class="flex items-start gap-3">
+    <Kicker>Workflow 0</Kicker>
+    <TipChip label="Alpha" class="!bg-sky-300 !text-white" />
+  </div>
   <h1 class="!text-[40px] font-extrabold !leading-tight mt-3">
     Human Request → On-Demand Tool Generation
   </h1>

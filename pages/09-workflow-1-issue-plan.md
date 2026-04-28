@@ -19,14 +19,14 @@ page: 9
           <span class="text-white/65">YouTrack</span>,
           <img src="/docs/brand-assets/jira.svg" class="h-3 inline align-[-2px]" />
           <span class="text-white/50">Jira</span>,
-          native GitHub plugin, Slack, or <Highlight>any MCP connector</Highlight>
+          native GitHub plugin, Slack, or <Highlight>any MCP connector/ Agent Skills</Highlight>
         </p>
       </div>
       <div class="flex gap-2">
         <span class="text-white/25 mt-1 text-[10px] flex-shrink-0">●</span>
         <p>
           <img src="/docs/brand-assets/Rider/Rider_icon.svg" class="h-3.5 inline align-[-2px]" />
-          <span class="text-white/65">Rider</span> is the hub — any <Highlight>ACP agent or IntelliJ plugin</Highlight> acts with full IDE context; blast radius mapped before a line is changed
+          <span class="text-white/65">Rider</span> calls agents <em>and</em> exposes a <Highlight>Rider MCP Server</Highlight> — agents receive precise semantic context, consume fewer tokens, and every generated change is <Highlight>live-reviewed</Highlight> inside the IDE
         </p>
       </div>
       <div class="flex gap-2">

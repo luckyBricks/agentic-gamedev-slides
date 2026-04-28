@@ -10,7 +10,7 @@ page: 16
     Engine / Framework / Rendering Engineer
   </h1>
   <div class="flex-1 mt-5">
-    <PersonaCards :personas="[
+    <PersonaCards :gradient-bg="true" :personas="[
       {title: 'Engine Engineer', role: 'Core User', bullets: ['Global architecture visibility across the codebase', 'Safe refactoring at scale — not text replacement', 'Engine-aware semantic understanding of macros & reflection', 'Lower complex-system change risk'], stack: ['C++', 'ReSharper C++', 'Unreal', 'Rider'], tone: 'violet'}
     ]" />
   </div>

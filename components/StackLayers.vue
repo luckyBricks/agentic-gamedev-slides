@@ -30,9 +30,13 @@ const layers: Layer[] = [
     title: 'Quality Delivery Layer',
     tone: 'amber',
     icons: [
-      { src: '/docs/brand-assets/Qodana/Qodana_icon.svg',       label: 'Qodana' },
+      { src: '/docs/brand-assets/Qodana/Qodana_icon.svg',         label: 'Qodana' },
       { src: '/docs/brand-assets/TeamCity/TeamCity_icon.svg',     label: 'TeamCity' },
       { src: '/docs/brand-assets/YouTrack/YouTrack_icon.svg',     label: 'YouTrack' },
+      { src: '/docs/brand-assets/dotTrace/dotTrace_icon.svg',     label: 'dotTrace' },
+      { src: '/docs/brand-assets/dotPeek/dotPeek_icon.svg',       label: 'dotPeek' },
+      { src: '/docs/brand-assets/dotMemory/dotMemory_icon.svg',   label: 'dotMemory' },
+      { src: '/docs/brand-assets/dotCover/dotCover_icon.svg',     label: 'dotCover' },
     ],
   },
   {

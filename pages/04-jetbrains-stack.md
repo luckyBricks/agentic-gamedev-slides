@@ -4,6 +4,7 @@ chapter: violet
 page: 4
 mandala: left
 mandalaOpacity: 0.7
+transition: slide-down
 ---
 
 <div class="grid grid-cols-12 gap-8 h-full items-center">

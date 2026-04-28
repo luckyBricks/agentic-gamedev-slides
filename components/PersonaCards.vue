@@ -7,6 +7,7 @@ defineProps<{
     stack?: string[]
     tone?: 'violet' | 'pink' | 'amber' | 'cyan'
   }[]
+  gradientBg?: boolean
 }>()
 
 const toneMap: Record<string, string> = {
@@ -15,11 +16,19 @@ const toneMap: Record<string, string> = {
   amber: 'from-[#ffb547] to-[#ff7a3c]',
   cyan: 'from-[#3ad9ff] to-[#6c3bff]',
 }
+
+const bgGradientMap: Record<string, string> = {
+  violet: 'linear-gradient(135deg, rgba(108,59,255,0.25), rgba(154,75,255,0.25))',
+  pink:   'linear-gradient(135deg, rgba(255,58,168,0.25), rgba(231,60,255,0.25))',
+  amber:  'linear-gradient(135deg, rgba(255,181,71,0.25), rgba(255,122,60,0.25))',
+  cyan:   'linear-gradient(135deg, rgba(58,217,255,0.25), rgba(108,59,255,0.25))',
+}
 </script>
 
 <template>
   <div class="grid gap-3" :style="{ gridTemplateColumns: `repeat(${personas.length}, minmax(0, 1fr))` }">
-    <div v-for="p in personas" :key="p.title" class="rider-card flex flex-col gap-2">
+    <div v-for="p in personas" :key="p.title" class="rider-card flex flex-col gap-2"
+         :style="{ background: gradientBg ? bgGradientMap[p.tone || 'violet'] : 'rgba(255,255,255,0.25)' }">
       <div class="flex items-center justify-between">
         <div>
           <div class="text-[10px] tracking-[0.25em] uppercase rider-muted">{{ p.role }}</div>

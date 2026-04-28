@@ -213,35 +213,7 @@ body {
   top: 22px;
   right: 28px;
   z-index: 20;
-  display: flex;
-  align-items: center;
-  gap: 8px;
   pointer-events: none;
-}
-
-.rider-corner-badge__icon {
-  height: 24px;
-  width: 24px;
-}
-
-.rider-corner-badge__copy {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  line-height: 1;
-}
-
-.rider-corner-badge__copy strong {
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 800;
-}
-
-.rider-corner-badge__copy span {
-  color: rgba(255, 255, 255, 0.62);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
 }
 
 /* ------- Mandala wrapper (legacy, kept for direct use) ------- */

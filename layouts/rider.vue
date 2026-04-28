@@ -7,9 +7,6 @@ interface Frontmatter {
   mandalaOpacity?: number
   mandalaVariant?: 'default' | 'wide'
   badge?: boolean
-  product?: string
-  badgeLabel?: string
-  badgeSub?: string
 }
 
 const props = defineProps<{ frontmatter?: Frontmatter }>()
@@ -35,12 +32,7 @@ const showBadge = computed(() => props.frontmatter?.badge !== false)
       :position="bgPos === 'hidden' ? 'right' : bgPos"
       :opacity="frontmatter?.mandalaOpacity ?? 0.82"
     />
-    <CornerBadge
-      v-if="showBadge"
-      :product="frontmatter?.product"
-      :label="frontmatter?.badgeLabel"
-      :sub="frontmatter?.badgeSub"
-    />
+    <CornerBadge v-if="showBadge" />
     <div class="relative z-10 w-full h-full">
       <slot />
     </div>

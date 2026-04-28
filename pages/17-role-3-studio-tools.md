@@ -10,7 +10,7 @@ page: 17
     Studio Tools / AI Platform / QA / Build &amp; Release
   </h1>
   <div class="flex-1 mt-5">
-    <PersonaCards :personas="[
+    <PersonaCards :gradient-bg="true" :personas="[
       {title: 'Studio Tools & AI Platform', role: 'Process Owner', bullets: ['Turn Rider into the base for internal agents & skills', 'Consolidate studio-specific tooling onto one platform', 'Govern agent capabilities and model access'], stack: ['MCP', 'ACP', 'Junie', 'AI Enterprise'], tone: 'amber'},
       {title: 'QA & Build / Release', role: 'Process Owner', bullets: ['Pull testing, coverage, static analysis into one pipeline', 'Shorten feedback loops with pre-merge quality gates', 'Protect mainline stability with automated verification'], stack: ['Qodana', 'TeamCity', 'dotCover', 'Perforce'], tone: 'cyan'}
     ]" />

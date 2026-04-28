@@ -3,7 +3,7 @@ const quadrants = [
   { title: 'Unreal', icon: '/docs/brand-assets/unreal-engine.svg', tags: ['Reflection', 'Blueprints', 'Debug & Tests'], tone: 'violet' },
   { title: 'Unity',  icon: '/docs/brand-assets/unity.svg',         tags: ['Tests', 'Profiling', 'Shaders'], tone: 'pink' },
   { title: 'Perforce', icon: '/docs/brand-assets/perforce.svg',    tags: ['Changelists', 'Shelve', 'Conflict UI'], tone: 'amber' },
-  { title: 'Godot',  icon: '',                                     tags: ['C#', 'GDScript', 'Unified Workbench'], tone: 'cyan' },
+  { title: 'Godot',  icon: '/docs/brand-assets/godot.svg',          tags: ['C#', 'GDScript', 'Unified Workbench'], tone: 'cyan' },
 ] as const
 
 const toneMap: Record<string, string> = {
