@@ -5,26 +5,33 @@ page: 13
 mandalaOpacity: 0.7
 ---
 
-<div class="grid grid-cols-12 gap-8 h-full items-center">
-  <div class="col-span-5">
-    <Kicker>Workflow 5</Kicker>
-    <h1 class="!text-[40px] font-extrabold !leading-tight mt-4">
-      Performance / Memory / Regression Triage
+<div class="h-full flex flex-col pr-2">
+<div class="grid grid-cols-12 gap-6 flex-1 min-h-0 items-center pb-6">
+  <div class="col-span-4 pb-8">
+    <div class="flex items-center gap-3">
+      <Kicker>Workflow 5</Kicker>
+      <span class="rounded border border-white/18 px-2 py-0.5 text-[11px] font-semibold text-white/62">Profiling loop</span>
+    </div>
+    <h1 class="!text-[35px] font-extrabold !leading-[1.06] mt-4">
+      Performance Triage Is a Loop, Not a Tool Window
     </h1>
-    <div class="mt-6 space-y-3 text-[15px] leading-relaxed text-white/90">
-      <p>❏ <img src="/docs/brand-assets/dotTrace/dotTrace_icon.svg" class="h-5 inline" /> <strong>dotTrace</strong> — bottlenecks &amp; hot spots</p>
-      <p>❏ <img src="/docs/brand-assets/dotMemory/dotMemory_icon.svg" class="h-5 inline" /> <strong>dotMemory</strong> — memory issue localization</p>
-      <p>❏ <img src="/docs/brand-assets/dotCover/dotCover_icon.svg" class="h-5 inline" /> <strong>dotCover</strong> — coverage &amp; regression safety</p>
-    </div>
-    <div class="mt-4 text-[14px] text-white/60">
-      <TipChip /> The most expensive thing in GameDev is not building features — it's fixing experience.
+    <div class="mt-4 rider-card rider-card--dark text-[12px] leading-relaxed text-white/64">
+      <strong class="text-white/90">Support boundary:</strong>
+      native engine profilers stay the source of truth for GPU, rendering, assets, and engine-level telemetry.
     </div>
   </div>
-  <div class="col-span-7 flex items-center justify-center">
-    <PerfDashboard />
+  <div class="col-span-8">
+    <ProfilerWorkflowMatrix />
   </div>
+</div>
+<div class="-mb-1 text-[12.5px] leading-relaxed text-white/62">
+  <TipChip /> Native profiler + JetBrains profiler: runtime evidence becomes code navigation, managed-memory diagnosis, test coverage, and CI regression gates.
+</div>
 </div>
 
 <!--
-If your audience is a game CTO or engine lead, raise this page's weight — it extends IDE value from "writing code" to "keeping the player experience." In agentic workflows, analysis still needs professional tools.
+Keep the promise precise. Unity/Unreal native profilers remain authoritative for engine telemetry, GPU, rendering, assets, and native memory. JetBrains tools add source-level follow-up: dotTrace for Unity and Unreal performance profiling, dotMemory for managed/.NET memory, and dotCover only for managed or Unity-test coverage where supported.
+  
+Unity Profiler / Unreal Insights find the runtime symptom; dotTrace / dotMemory / dotCover turn it into source-level diagnosis and regression control.
+    
 -->

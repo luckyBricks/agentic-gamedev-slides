@@ -5,20 +5,24 @@ page: 14
 mandalaOpacity: 0.6
 ---
 
-<div class="grid grid-cols-12 gap-8 h-full items-center">
-  <div class="col-span-5">
-    <Kicker>Stakeholder View</Kicker>
-    <h1 class="!text-[40px] font-extrabold !leading-tight mt-4">
-      Role Map
+<div class="h-full flex flex-col justify-center">
+  <div class="max-w-[850px]">
+    <Kicker>Stakeholder architecture</Kicker>
+    <h1 class="!text-[42px] font-extrabold !leading-tight mt-4">
+      Adoption expands from users to governance
     </h1>
-    <div class="mt-6 space-y-3 text-[15px] leading-relaxed text-white/80">
-      <p>❏ <strong>Core Users</strong> — pursue shorter implementation &amp; debugging cycles</p>
-      <p>❏ <strong>Process Owners</strong> — pursue stable mainlines &amp; faster feedback</p>
-      <p>❏ <strong>Decision Makers</strong> — pursue toolchain convergence &amp; AI governance</p>
-    </div>
+    <p class="mt-4 max-w-[780px] text-[16px] leading-relaxed text-white/70">
+      Switch from the process line to the role line. The same stack creates different value signals for hands-on creators, delivery owners, and executive buyers.
+    </p>
   </div>
-  <div class="col-span-7 flex items-center justify-center">
+
+  <div class="mt-11">
     <RoleMap />
+  </div>
+
+  <div class="mt-8 max-w-[780px] text-[12.5px] leading-relaxed text-white/58">
+    <span class="rider-chip rider-chip--tip">Tip:</span>
+    Read the next four pages as a buyer map, not a feature tour.
   </div>
 </div>
 
