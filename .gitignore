@@ -5,3 +5,17 @@ dist
 .vite-inspect
 .remote-assets
 components.d.ts
+exports
+
+# Agent directories
+.agents/
+.junie/
+.qoder/
+.qwen/
+.trae/
+.windsurf/
+
+# Exported presentation files
+*.pdf
+*.pptx
+*.ppt
