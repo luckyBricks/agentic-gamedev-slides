@@ -13,7 +13,7 @@ page: 5
     <div class="mt-6 space-y-3 text-[15px] leading-relaxed text-white/90">
       <p>❏ <strong>Shared Context</strong> — 双方看到相同的项目语义</p>
       <p>❏ <strong>Shared Tooling</strong> — refactoring、tests、debugger、VCS 共享同一套基础设施</p>
-      <p>❏ <strong>Shared Control</strong> — 敏感操作可审计、可中止、可撤回</p>
+      <p>❏ <strong>Shared Control</strong> — 敏感操作可审计、可中止、可撤回<span class="text-white/45"> — 由 Agent Workbench 提供具体表面</span></p>
     </div>
   </div>
   <div class="col-span-7 flex items-center justify-center">

@@ -65,6 +65,10 @@ src: ./pages/06-acp-mcp-junie.md
 ---
 
 ---
+src: ./pages/06b-agent-workbench.md
+---
+
+---
 src: ./pages/07-mcp-steroid.md
 ---
 
@@ -90,6 +94,10 @@ src: ./pages/12-workflow-4-quality-gate.md
 
 ---
 src: ./pages/13-workflow-5-perf-triage.md
+---
+
+---
+src: ./pages/13b-workflow-6-multi-agent.md
 ---
 
 ---
@@ -142,4 +150,8 @@ src: ./pages/A3-demo-menu.md
 
 ---
 src: ./pages/A4-kpi-framework.md
+---
+
+---
+src: ./pages/A5-workbench-use-cases.md
 ---

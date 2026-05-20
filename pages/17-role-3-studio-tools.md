@@ -18,5 +18,5 @@ page: 17
 </div>
 
 <!--
-最关键的一句话：JetBrains 不只是卖给 coder — 它也卖给工作室的平台团队。价值范围从编程延伸到交付基础设施。
+最关键的一句话：JetBrains 不只是卖给 coder — 它也卖给工作室的平台团队。价值范围从编程延伸到交付基础设施。AI Platform 在 Agent Workbench 中策展 studio-approved agents——Workbench 是「观察驾驶舱」、MCP Steroid 是「skill 合成实验场」，两条轨并行：前者治理可见的合规 agent，后者孵化高价值的 skill 候选。
 -->

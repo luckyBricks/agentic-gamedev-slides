@@ -48,7 +48,7 @@ page: 6
       </div>
     </div>
     <div class="mt-5 text-[12px] text-white/45">
-      <StatusChip label="New" /> <span class="ml-1">Rider 2026.1 — 为 GameDev 优化的 agent presets</span>
+      <StatusChip label="New" /> <span class="ml-1">Rider 2026.1 + Agent Workbench — 多 agent 驾驶舱已就绪</span>
     </div>
   </div>
   <!-- Right: primary — the three-lane diagram -->

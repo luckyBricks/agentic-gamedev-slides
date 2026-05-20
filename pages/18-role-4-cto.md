@@ -16,6 +16,9 @@ page: 18
     <div class="mt-6 text-[14px] text-white/60">
       <TipChip /> <strong class="text-white">dotUltimate</strong> — 覆盖整个 .NET 与 GameDev 工具套件
     </div>
+    <div class="mt-3 text-[12px] text-white/52 leading-relaxed">
+      ❏ <strong class="text-white/75">Agent Workbench</strong> 提供 agent 使用 telemetry — 治理可见性免费送
+    </div>
   </div>
   <div class="col-span-7 flex items-center justify-center">
     <ExecutiveGrid />

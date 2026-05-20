@@ -15,6 +15,7 @@ const groups = [
       { name: 'Junie', tags: ['Plan + execute', 'IDE / terminal / CI'] },
       { name: 'ACP Registry', tags: ['Discover agents', 'No lock-in'] },
       { name: 'MCP Server', tags: ['Expose IDE tools', 'Claude / Cursor / Codex'] },
+      { name: 'Agent Workbench', tags: ['Multi-agent cockpit', 'Persistent sessions', 'Experimental'] },
     ],
     tone: 'pink',
   },
