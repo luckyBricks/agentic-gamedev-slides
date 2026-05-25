@@ -19,3 +19,14 @@ exports
 *.pdf
 *.pptx
 *.ppt
+
+# Binary assets
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.bmp
+*.tif
+*.tiff
+*.ico
