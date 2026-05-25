@@ -39,21 +39,21 @@ const lanes = [
 ] as const
 
 const toneGrad: Record<string, string> = {
-  violet: 'from-[#6c3bff]/80 to-[#9a4bff]/60',
-  pink:   'from-[#d03cff]/80 to-[#ff3aa8]/60',
-  amber:  'from-[#ff7a3c]/80 to-[#ffb547]/60',
+  violet: 'from-[#7C3AED]/80 to-[#8B5CF6]/60',
+  pink:   'from-[#C026D3]/80 to-[#C026D3]/60',
+  amber:  'from-[#FF8200]/80 to-[#FE9900]/60',
 }
 
 const toneBorder: Record<string, string> = {
-  violet: 'border-[#9a4bff]/40',
-  pink:   'border-[#ff3aa8]/40',
-  amber:  'border-[#ffb547]/40',
+  violet: 'border-[#8B5CF6]/40',
+  pink:   'border-[#C026D3]/40',
+  amber:  'border-[#FE9900]/40',
 }
 
 const toneText: Record<string, string> = {
-  violet: 'text-[#b07aff]',
-  pink:   'text-[#ff8ae0]',
-  amber:  'text-[#ffb547]',
+  violet: 'text-[#C4B5FD]',
+  pink:   'text-[#F0ABFC]',
+  amber:  'text-[#FE9900]',
 }
 </script>
 

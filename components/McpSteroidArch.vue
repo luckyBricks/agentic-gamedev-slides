@@ -10,10 +10,10 @@ const surfaces = [
   { label: 'Runtime Context', tone: 'cyan' },
 ]
 const toneMap: Record<string, string> = {
-  violet: 'from-[#6c3bff]/45 to-[#9a4bff]/10 border-[#9a4bff88]',
-  pink:   'from-[#ff3aa8]/45 to-[#e73cff]/10 border-[#ff3aa888]',
-  amber:  'from-[#ff7a3c]/45 to-[#ffb547]/10 border-[#ffb54788]',
-  cyan:   'from-[#3ad9ff]/45 to-[#6c3bff]/10 border-[#3ad9ff88]',
+  violet: 'from-[#7C3AED]/45 to-[#8B5CF6]/10 border-[#8B5CF688]',
+  pink:   'from-[#C026D3]/45 to-[#C026D3]/10 border-[#C026D388]',
+  amber:  'from-[#FF8200]/45 to-[#FE9900]/10 border-[#FE990088]',
+  cyan:   'from-[#C026D3]/45 to-[#7C3AED]/10 border-[#C026D388]',
 }
 </script>
 

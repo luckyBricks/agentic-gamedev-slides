@@ -140,7 +140,7 @@ const workflows: Workflow[] = [
             <p class="mt-1 text-[10px] leading-snug text-white/55">{{ stage.detail }}</p>
             <div
               v-if="stageIndex < 2"
-              class="absolute top-1/2 -right-[11px] z-20 h-5 w-5 rounded-full border border-cyan-200/25 bg-[#06151d] text-center text-[16px] leading-[18px] text-cyan-100/75"
+              class="absolute top-1/2 -right-[11px] z-20 h-5 w-5 rounded-full border border-cyan-200/25 bg-[#241A33] text-center text-[16px] leading-[18px] text-cyan-100/75"
             >
               ›
             </div>
@@ -155,9 +155,9 @@ const workflows: Workflow[] = [
 .workflow-card {
   padding: 10px 12px;
   background:
-    radial-gradient(circle at 3% 12%, rgba(58, 217, 255, 0.15), transparent 26%),
+    radial-gradient(circle at 3% 12%, rgba(192, 38, 211, 0.15), transparent 26%),
     linear-gradient(110deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.055));
-  border-color: rgba(58, 217, 255, 0.2);
+  border-color: rgba(192, 38, 211, 0.2);
   box-shadow: 0 18px 46px rgba(0, 0, 0, 0.18);
 }
 
@@ -166,7 +166,7 @@ const workflows: Workflow[] = [
   position: absolute;
   inset: auto 0 0 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--mandala-c, #3ad9ff), transparent);
+  background: linear-gradient(90deg, transparent, var(--mandala-c, #C026D3), transparent);
   opacity: 0.5;
 }
 </style>

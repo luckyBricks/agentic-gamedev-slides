@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 
 interface Frontmatter {
-  chapter?: 'violet' | 'cyan' | 'amber' | 'green' | 'magenta'
+  chapter?: 'violet' | 'magenta' | 'red' | 'green' | 'cyan' | 'amber'
   mandala?: 'right' | 'left' | 'center' | 'hidden'
   mandalaOpacity?: number
 }
@@ -15,7 +15,7 @@ const chapterClass = computed(() => `rider-chapter--${props.frontmatter?.chapter
   <div :class="['rider-slide', 'rider-slide--section', chapterClass]" class="relative w-full h-full overflow-hidden flex items-center">
     <DotUltimateBg
       position="right"
-      :opacity="frontmatter?.mandalaOpacity ?? 1"
+      :opacity="frontmatter?.mandalaOpacity ?? 0.55"
     />
     <CornerBadge />
     <div class="relative z-10 w-full max-w-[58%] pl-4">
@@ -28,8 +28,8 @@ const chapterClass = computed(() => `rider-chapter--${props.frontmatter?.chapter
 <style scoped>
 .rider-slide {
   padding: 48px 56px 40px 56px;
-  color: #ffffff !important;
-  background: #050510 !important;
+  color: var(--rider-ink) !important;
+  background: var(--rider-bg) !important;
 }
 
 .rider-slide :deep(h1),

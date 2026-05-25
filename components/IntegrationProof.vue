@@ -7,17 +7,17 @@ const quadrants = [
 ] as const
 
 const toneMap: Record<string, string> = {
-  violet: 'from-[#6c3bff]/50 to-[#9a4bff]/20 border-[#9a4bff80]',
-  pink:   'from-[#ff3aa8]/50 to-[#e73cff]/20 border-[#ff3aa880]',
-  amber:  'from-[#ff7a3c]/50 to-[#ffb547]/20 border-[#ffb54780]',
-  cyan:   'from-[#3ad9ff]/50 to-[#6c3bff]/20 border-[#3ad9ff80]',
+  violet: 'from-[#7C3AED]/50 to-[#8B5CF6]/20 border-[#8B5CF680]',
+  pink:   'from-[#C026D3]/50 to-[#C026D3]/20 border-[#C026D380]',
+  amber:  'from-[#FF8200]/50 to-[#FE9900]/20 border-[#FE990080]',
+  cyan:   'from-[#C026D3]/50 to-[#7C3AED]/20 border-[#C026D380]',
 }
 </script>
 
 <template>
   <div class="relative grid grid-cols-2 gap-3 w-full">
     <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
-      <div class="rider-card px-3 py-2 text-center bg-[var(--rider-bg-2,#0b0616)]">
+      <div class="rider-card px-3 py-2 text-center bg-[var(--rider-bg-2,#1A1424)]">
         <div class="text-[10px] uppercase tracking-[0.25em] rider-muted">Rider Core</div>
         <div class="text-sm font-semibold">Engine-aware IDE</div>
       </div>

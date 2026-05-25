@@ -11,17 +11,17 @@ defineProps<{
 }>()
 
 const toneMap: Record<string, string> = {
-  violet: 'from-[#6c3bff] to-[#9a4bff]',
-  pink: 'from-[#ff3aa8] to-[#e73cff]',
-  amber: 'from-[#ffb547] to-[#ff7a3c]',
-  cyan: 'from-[#3ad9ff] to-[#6c3bff]',
+  violet: 'from-[#7C3AED] to-[#8B5CF6]',
+  pink: 'from-[#C026D3] to-[#C026D3]',
+  amber: 'from-[#FE9900] to-[#FF8200]',
+  cyan: 'from-[#C026D3] to-[#7C3AED]',
 }
 
 const bgGradientMap: Record<string, string> = {
-  violet: 'linear-gradient(135deg, rgba(108,59,255,0.25), rgba(154,75,255,0.25))',
-  pink:   'linear-gradient(135deg, rgba(255,58,168,0.25), rgba(231,60,255,0.25))',
+  violet: 'linear-gradient(135deg, rgba(124, 58, 237,0.25), rgba(139, 92, 246,0.25))',
+  pink:   'linear-gradient(135deg, rgba(192, 38, 211,0.25), rgba(192, 38, 211,0.25))',
   amber:  'linear-gradient(135deg, rgba(255,181,71,0.25), rgba(255,122,60,0.25))',
-  cyan:   'linear-gradient(135deg, rgba(58,217,255,0.25), rgba(108,59,255,0.25))',
+  cyan:   'linear-gradient(135deg, rgba(192, 38, 211,0.25), rgba(124, 58, 237,0.25))',
 }
 </script>
 

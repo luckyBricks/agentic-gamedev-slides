@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 
 interface Frontmatter {
-  chapter?: 'violet' | 'cyan' | 'amber' | 'green' | 'magenta'
+  chapter?: 'violet' | 'magenta' | 'red' | 'green' | 'cyan' | 'amber'
   mandala?: 'right' | 'left' | 'center' | 'hidden'
   mandalaOpacity?: number
   mandalaVariant?: 'default' | 'wide'
@@ -20,7 +20,7 @@ const showMandala = computed(() => mandalaPos.value !== 'hidden')
     <DotUltimateBg
       v-if="showMandala"
       :position="mandalaPos === 'hidden' ? 'right' : mandalaPos"
-      :opacity="frontmatter?.mandalaOpacity ?? 1"
+      :opacity="frontmatter?.mandalaOpacity ?? 0.65"
     />
 
     <div class="rider-cover-jb absolute top-[26px] left-[48px] z-20">
@@ -40,8 +40,8 @@ const showMandala = computed(() => mandalaPos.value !== 'hidden')
 <style scoped>
 .rider-slide {
   padding: 48px 56px 40px 56px;
-  color: #ffffff !important;
-  background: #050510 !important;
+  color: var(--rider-ink) !important;
+  background: var(--rider-bg) !important;
 }
 
 .rider-slide :deep(h1),

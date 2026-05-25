@@ -19,10 +19,10 @@ import Pager from 'slidev-component-pager/components/Pager.vue'
 
 .rider-pagenumber :deep(.pager) {
   position: static !important;
-  font-family: Georgia, 'Times New Roman', serif !important;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif !important;
   font-style: italic !important;
   font-size: 15px !important;
-  color: rgba(255, 255, 255, 0.35) !important;
+  color: var(--rider-ink-faint) !important;
   padding: 0 !important;
   line-height: 1 !important;
   width: auto !important;

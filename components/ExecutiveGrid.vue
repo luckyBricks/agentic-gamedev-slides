@@ -7,10 +7,10 @@ const cards = [
 ] as const
 
 const toneMap: Record<string, string> = {
-  violet: 'from-[#6c3bff]/45 to-transparent border-[#9a4bff99]',
-  pink:   'from-[#ff3aa8]/45 to-transparent border-[#ff3aa899]',
-  amber:  'from-[#ff7a3c]/45 to-transparent border-[#ffb54799]',
-  cyan:   'from-[#3ad9ff]/45 to-transparent border-[#3ad9ff99]',
+  violet: 'from-[#7C3AED]/45 to-transparent border-[#8B5CF699]',
+  pink:   'from-[#C026D3]/45 to-transparent border-[#C026D399]',
+  amber:  'from-[#FF8200]/45 to-transparent border-[#FE990099]',
+  cyan:   'from-[#C026D3]/45 to-transparent border-[#C026D399]',
 }
 </script>
 

@@ -38,10 +38,10 @@ const groups = [
 ] as const
 
 const toneMap: Record<string, string> = {
-  violet: 'border-[#9a4bff88]',
-  pink:   'border-[#ff3aa888]',
-  amber:  'border-[#ffb54788]',
-  cyan:   'border-[#3ad9ff88]',
+  violet: 'border-[#8B5CF688]',
+  pink:   'border-[#C026D388]',
+  amber:  'border-[#FE990088]',
+  cyan:   'border-[#C026D388]',
 }
 </script>
 

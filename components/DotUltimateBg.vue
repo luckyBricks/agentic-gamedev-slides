@@ -6,7 +6,7 @@ withDefaults(defineProps<{
   opacity?: number
 }>(), {
   position: 'right',
-  opacity: 0.9,
+  opacity: 0.5,
 })
 
 // Unique gradient ID per instance — SVG IDs are document-global in inline SVG

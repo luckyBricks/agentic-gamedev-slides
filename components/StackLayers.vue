@@ -50,10 +50,10 @@ const layers: Layer[] = [
 ]
 
 const toneMap: Record<string, string> = {
-  violet: 'from-[#6c3bff66] via-[#9a4bff33] to-transparent border-[#9a4bff55]',
-  pink:   'from-[#e73cff66] via-[#ff3aa833] to-transparent border-[#ff3aa855]',
-  amber:  'from-[#ff7a3c55] via-[#ffb54733] to-transparent border-[#ffb54755]',
-  cyan:   'from-[#3ad9ff55] via-[#6c3bff33] to-transparent border-[#3ad9ff55]',
+  violet: 'from-[#7C3AED66] via-[#8B5CF633] to-transparent border-[#8B5CF655]',
+  pink:   'from-[#C026D366] via-[#C026D333] to-transparent border-[#C026D355]',
+  amber:  'from-[#FF820055] via-[#FE990033] to-transparent border-[#FE990055]',
+  cyan:   'from-[#C026D355] via-[#7C3AED33] to-transparent border-[#C026D355]',
 }
 </script>
 

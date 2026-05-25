@@ -48,9 +48,9 @@ const bars = [6, 10, 14, 18, 14, 18, 22, 16, 20, 14, 10, 7]
     <div class="grid grid-cols-2 gap-3">
 
       <!-- Quality Control -->
-      <div class="flex flex-col gap-2 p-4 rounded-xl border border-[#a855f7]/35 bg-gradient-to-br from-[#7c3aed]/10 to-[#a855f7]/5">
+      <div class="flex flex-col gap-2 p-4 rounded-xl border border-[#7C3AED]/35 bg-gradient-to-br from-[#7C3AED]/10 to-[#7C3AED]/5">
         <div class="flex items-center justify-between">
-          <span class="text-[9px] font-semibold text-[#c084fc]/60 tracking-widest">Verification Layer</span>
+          <span class="text-[9px] font-semibold text-[#8B5CF6]/60 tracking-widest">Verification Layer</span>
           <img src="/docs/brand-assets/Qodana/Qodana_icon.svg" class="h-3.5 opacity-55" />
         </div>
         <div class="text-[16px] font-bold text-white/90 leading-snug">Quality Control</div>
@@ -58,11 +58,11 @@ const bars = [6, 10, 14, 18, 14, 18, 22, 16, 20, 14, 10, 7]
         <div class="text-[10.5px] text-white/50 leading-relaxed flex-1">
           Automated gates catch what human review misses. Every generated line must pass before it ships.
         </div>
-        <div class="text-[11px] font-semibold text-[#c084fc]">Unavoidable bottleneck</div>
+        <div class="text-[11px] font-semibold text-[#8B5CF6]">Unavoidable bottleneck</div>
       </div>
 
       <!-- AI Governance -->
-      <div class="flex flex-col gap-2 p-4 rounded-xl border border-[#FF0A67]/40 bg-gradient-to-br from-[#FF0A67]/12 to-[#ff7a3c]/6 shadow-[0_0_20px_rgba(255,10,103,0.12)]">
+      <div class="flex flex-col gap-2 p-4 rounded-xl border border-[#FF0A67]/40 bg-gradient-to-br from-[#FF0A67]/12 to-[#FF8200]/6 shadow-[0_0_20px_rgba(255,10,103,0.12)]">
         <div class="flex items-center justify-between">
           <span class="text-[9px] font-semibold text-[#FF0A67]/65 tracking-widest">Strategic Layer</span>
           <img src="/docs/brand-assets/Junie/Junie_icon.svg" class="h-3.5 opacity-65" />

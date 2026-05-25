@@ -1,6 +1,6 @@
 ---
 layout: rider
-chapter: amber
+chapter: red
 page: 8
 ---
 

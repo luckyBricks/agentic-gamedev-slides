@@ -1,6 +1,6 @@
 ---
 layout: rider
-chapter: amber
+chapter: red
 page: 7
 mandalaOpacity: 0.8
 ---

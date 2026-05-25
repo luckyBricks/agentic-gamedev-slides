@@ -15,18 +15,18 @@ const agents = [
       <div class="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] rider-muted">
         <span>RIDER · Shared Workbench</span>
         <span class="flex gap-1.5">
-          <span class="w-2 h-2 rounded-full bg-[#ff3aa8]" />
-          <span class="w-2 h-2 rounded-full bg-[#ffb547]" />
-          <span class="w-2 h-2 rounded-full bg-[#3ad9ff]" />
+          <span class="w-2 h-2 rounded-full bg-[#C026D3]" />
+          <span class="w-2 h-2 rounded-full bg-[#FE9900]" />
+          <span class="w-2 h-2 rounded-full bg-[#C026D3]" />
         </span>
       </div>
 
       <div class="mt-4 grid grid-cols-5 gap-3 flex-1">
         <div class="col-span-2 relative rider-card p-3 text-[11px] font-mono leading-5 overflow-hidden">
           <div class="rider-muted mb-1">PlayerController.cs</div>
-          <div><span class="text-[#ff7a3c]">public</span> <span class="text-[#3ad9ff]">void</span> <span class="text-white">Dash</span>()</div>
+          <div><span class="text-[#FF8200]">public</span> <span class="text-[#C026D3]">void</span> <span class="text-white">Dash</span>()</div>
           <div class="opacity-70 pl-3">// engine-aware AI edits</div>
-          <div class="pl-3"><span class="text-[#e73cff]">rb</span>.<span class="text-[#ffb547]">AddForce</span>(dir * power);</div>
+          <div class="pl-3"><span class="text-[#C026D3]">rb</span>.<span class="text-[#FE9900]">AddForce</span>(dir * power);</div>
           <div class="rider-scanline" />
         </div>
         <div class="col-span-2 rider-card p-3 text-[11px] leading-5">

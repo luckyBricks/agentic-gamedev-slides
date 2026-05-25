@@ -129,9 +129,9 @@ const iconPaths: Record<IconName, string[]> = {
   z-index: -2;
   border-radius: 999px;
   background:
-    radial-gradient(circle at 18% 50%, rgba(231, 60, 255, 0.28), transparent 28%),
-    radial-gradient(circle at 50% 50%, rgba(154, 75, 255, 0.22), transparent 30%),
-    radial-gradient(circle at 82% 50%, rgba(108, 59, 255, 0.2), transparent 28%);
+    radial-gradient(circle at 18% 50%, rgba(192, 38, 211, 0.28), transparent 28%),
+    radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.22), transparent 30%),
+    radial-gradient(circle at 82% 50%, rgba(124, 58, 237, 0.2), transparent 28%);
   filter: blur(22px);
 }
 
@@ -175,7 +175,7 @@ const iconPaths: Record<IconName, string[]> = {
   border-radius: 14px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.026)),
-    rgba(5, 5, 16, 0.68);
+    rgba(26, 20, 36, 0.68);
   backdrop-filter: blur(12px);
 }
 
@@ -185,8 +185,8 @@ const iconPaths: Record<IconName, string[]> = {
   inset: 0;
   border-radius: inherit;
   background:
-    linear-gradient(135deg, rgba(231, 60, 255, 0.18), transparent 44%),
-    linear-gradient(315deg, rgba(108, 59, 255, 0.14), transparent 42%);
+    linear-gradient(135deg, rgba(192, 38, 211, 0.18), transparent 44%),
+    linear-gradient(315deg, rgba(124, 58, 237, 0.14), transparent 42%);
   opacity: 0.76;
   pointer-events: none;
 }
@@ -202,7 +202,7 @@ const iconPaths: Record<IconName, string[]> = {
 
 .role-column__step {
   color: rgba(255, 255, 255, 0.28);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
   font-size: 18px;
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -215,7 +215,7 @@ const iconPaths: Record<IconName, string[]> = {
   flex: 0 0 auto;
   color: white;
   background: linear-gradient(135deg, var(--mandala-c), var(--mandala-b));
-  box-shadow: 0 0 22px rgba(231, 60, 255, 0.24);
+  box-shadow: 0 0 22px rgba(192, 38, 211, 0.24);
 }
 
 .role-column__icon {
@@ -316,7 +316,7 @@ svg {
   gap: 9px;
   transform: translateX(-50%);
   color: rgba(255, 255, 255, 0.42);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
   font-size: 9.5px;
   font-weight: 700;
   letter-spacing: 0.08em;

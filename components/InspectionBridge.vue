@@ -18,7 +18,7 @@ const issues = [
 
     <!-- Top accent rule (amber) -->
     <div class="absolute top-0 left-6 h-px"
-      style="width: 72px; background: #ffb700; opacity: 0.8;"></div>
+      style="width: 72px; background: #FE9900; opacity: 0.8;"></div>
 
     <!-- Stage caption -->
     <div class="absolute top-3 right-5 font-mono select-none"
@@ -33,7 +33,7 @@ const issues = [
       <div class="flex flex-col flex-shrink-0 justify-start" style="width: 118px;">
         <div class="font-mono mb-2"
           style="font-size: 9.5px; letter-spacing: 0.06em; color: rgba(255,255,255,0.35);">
-          <span style="color: #ffb700;">01</span> · Agent
+          <span style="color: #FE9900;">01</span> · Agent
         </div>
         <div class="flex flex-col gap-2">
 
@@ -91,7 +91,7 @@ const issues = [
         <div class="flex items-center gap-2.5 mb-3">
           <div class="relative flex-shrink-0">
             <div class="absolute inset-0 rounded-full pointer-events-none"
-              style="background: #ffb700; opacity: 0.15; filter: blur(12px); transform: scale(1.8);"></div>
+              style="background: #FE9900; opacity: 0.15; filter: blur(12px); transform: scale(1.8);"></div>
             <img src="/docs/brand-assets/Rider/Rider_icon.svg"
               style="height: 36px; width: 36px; position: relative;" alt="Rider" />
           </div>
@@ -112,7 +112,7 @@ const issues = [
         <div class="flex flex-col gap-1.5 flex-1">
 
           <div class="flex items-start gap-2.5" style="padding: 2px 0;">
-            <div style="width: 2.5px; background: #ffb700; flex-shrink: 0; border-radius: 1.5px; height: 32px; margin-top: 2px;"></div>
+            <div style="width: 2.5px; background: #FE9900; flex-shrink: 0; border-radius: 1.5px; height: 32px; margin-top: 2px;"></div>
             <div>
               <div class="font-mono" style="font-size: 7.5px; color: rgba(255,255,255,0.28); letter-spacing: 0.04em; line-height: 1;">Semantic Scope</div>
               <div class="text-white" style="font-size: 11px; font-weight: 600; line-height: 1.3; margin-top: 2px;">
@@ -122,7 +122,7 @@ const issues = [
           </div>
 
           <div class="flex items-start gap-2.5" style="padding: 2px 0;">
-            <div style="width: 2.5px; background: #ff9419; flex-shrink: 0; border-radius: 1.5px; height: 32px; margin-top: 2px;"></div>
+            <div style="width: 2.5px; background: #FE9900; flex-shrink: 0; border-radius: 1.5px; height: 32px; margin-top: 2px;"></div>
             <div>
               <div class="font-mono" style="font-size: 7.5px; color: rgba(255,255,255,0.28); letter-spacing: 0.04em; line-height: 1;">Engine Rules</div>
               <div class="text-white" style="font-size: 11px; font-weight: 600; line-height: 1.3; margin-top: 2px;">
@@ -169,7 +169,7 @@ const issues = [
       <div class="flex flex-col flex-shrink-0 justify-start" style="width: 112px;">
         <div class="font-mono mb-2"
           style="font-size: 9.5px; letter-spacing: 0.06em; color: rgba(255,255,255,0.35);">
-          <span style="color: #ffb700;">02</span> · Human
+          <span style="color: #FE9900;">02</span> · Human
         </div>
         <div class="flex flex-col gap-2">
 
@@ -186,8 +186,8 @@ const issues = [
           <!-- Metrics row -->
           <div class="grid grid-cols-2 gap-1">
             <div class="rounded-[7px] p-1.5 text-center"
-              style="background: rgba(72,224,84,0.08); border: 1px solid rgba(72,224,84,0.22);">
-              <div style="font-size: 14px; font-weight: 800; color: rgba(72,224,84,0.9); line-height: 1;">↓</div>
+              style="background: rgba(0, 166, 61,0.08); border: 1px solid rgba(0, 166, 61,0.22);">
+              <div style="font-size: 14px; font-weight: 800; color: rgba(0, 166, 61,0.9); line-height: 1;">↓</div>
               <div class="font-mono" style="font-size: 6.5px; color: rgba(255,255,255,0.30); margin-top: 2px;">leakage</div>
             </div>
             <div class="rounded-[7px] p-1.5 text-center"
@@ -199,8 +199,8 @@ const issues = [
 
           <!-- Clean badge -->
           <div class="rounded-[8px] px-2 py-1.5"
-            style="background: rgba(72,224,84,0.07); border: 1px solid rgba(72,224,84,0.22);">
-            <div class="font-mono" style="font-size: 7.5px; color: rgba(72,224,84,0.85); font-weight: 600;">✓ clean → merge</div>
+            style="background: rgba(0, 166, 61,0.07); border: 1px solid rgba(0, 166, 61,0.22);">
+            <div class="font-mono" style="font-size: 7.5px; color: rgba(0, 166, 61,0.85); font-weight: 600;">✓ clean → merge</div>
             <div class="font-mono mt-0.5" style="font-size: 7px; color: rgba(255,255,255,0.25);">zero review queue</div>
           </div>
 

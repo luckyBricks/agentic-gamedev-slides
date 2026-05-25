@@ -1,6 +1,6 @@
 ---
 layout: rider
-chapter: amber
+chapter: red
 page: 11
 ---
 
@@ -39,19 +39,19 @@ page: 11
         </div>
         <div class="grid grid-cols-2 gap-2">
           <div class="flex items-center gap-2 text-[12px] font-mono px-2.5 py-2 rounded-md bg-white/[0.04] border border-white/[0.08] text-white/80">
-            <carbon-search-locate class="text-[#ffb700]/80 text-[16px] flex-shrink-0" />
+            <carbon-search-locate class="text-[#FE9900]/80 text-[16px] flex-shrink-0" />
             <span class="truncate">inspect_code</span>
           </div>
           <div class="flex items-center gap-2 text-[12px] font-mono px-2.5 py-2 rounded-md bg-white/[0.04] border border-white/[0.08] text-white/80">
-            <carbon-flow-connection class="text-[#ffb700]/80 text-[16px] flex-shrink-0" />
+            <carbon-flow-connection class="text-[#FE9900]/80 text-[16px] flex-shrink-0" />
             <span class="truncate">find_usages</span>
           </div>
           <div class="flex items-center gap-2 text-[12px] font-mono px-2.5 py-2 rounded-md bg-white/[0.04] border border-white/[0.08] text-white/80">
-            <carbon-tree-view-alt class="text-[#ffb700]/80 text-[16px] flex-shrink-0" />
+            <carbon-tree-view-alt class="text-[#FE9900]/80 text-[16px] flex-shrink-0" />
             <span class="truncate">psi_tree</span>
           </div>
           <div class="flex items-center gap-2 text-[12px] font-mono px-2.5 py-2 rounded-md bg-white/[0.04] border border-white/[0.08] text-white/80">
-            <carbon-rule class="text-[#ffb700]/80 text-[16px] flex-shrink-0" />
+            <carbon-rule class="text-[#FE9900]/80 text-[16px] flex-shrink-0" />
             <span class="truncate">list_rules</span>
           </div>
         </div>
@@ -64,15 +64,15 @@ page: 11
         </div>
         <div class="grid grid-cols-2 gap-2">
           <div class="flex items-center gap-2 text-[12px] font-mono px-2.5 py-2 rounded-md bg-white/[0.04] border border-white/[0.08] text-white/80">
-            <carbon-flash class="text-[#48e054]/85 text-[16px] flex-shrink-0" />
+            <carbon-flash class="text-[#00A63D]/85 text-[16px] flex-shrink-0" />
             <span class="truncate">apply_fix</span>
           </div>
           <div class="flex items-center gap-2 text-[12px] font-mono px-2.5 py-2 rounded-md bg-white/[0.04] border border-white/[0.08] text-white/80">
-            <carbon-machine-learning-model class="text-[#48e054]/85 text-[16px] flex-shrink-0" />
+            <carbon-machine-learning-model class="text-[#00A63D]/85 text-[16px] flex-shrink-0" />
             <span class="truncate">refactor</span>
           </div>
           <div class="flex items-center gap-2 text-[12px] font-mono px-2.5 py-2 rounded-md bg-white/[0.04] border border-white/[0.08] text-white/80 col-span-2">
-            <carbon-checkmark-outline class="text-[#48e054]/85 text-[16px] flex-shrink-0" />
+            <carbon-checkmark-outline class="text-[#00A63D]/85 text-[16px] flex-shrink-0" />
             <span class="truncate">verify_clean — re-inspect after change</span>
           </div>
         </div>
@@ -122,21 +122,21 @@ page: 11
           <img src="/docs/brand-assets/unity.svg" class="h-5 opacity-80 invert flex-shrink-0" />
           <div class="flex-1 min-w-0">
             <div class="text-[11px] font-bold text-white/90 leading-tight">Unity · GC / Burst</div>
-            <div class="text-[9.5px] font-mono text-white/40 leading-tight mt-0.5">Update LINQ alloc <span class="text-white/25">›</span> <span class="text-[#48e054]/85">pool · cache</span></div>
+            <div class="text-[9.5px] font-mono text-white/40 leading-tight mt-0.5">Update LINQ alloc <span class="text-white/25">›</span> <span class="text-[#00A63D]/85">pool · cache</span></div>
           </div>
         </div>
         <div class="flex items-center gap-2 px-2.5 py-2 rounded-lg bg-white/[0.03] border border-white/[0.07]">
           <img src="/docs/brand-assets/unreal-engine.svg" class="h-5 opacity-80 flex-shrink-0" />
           <div class="flex-1 min-w-0">
             <div class="text-[11px] font-bold text-white/90 leading-tight">Unreal · BP · UPROPERTY · macro</div>
-            <div class="text-[9.5px] font-mono text-white/40 leading-tight mt-0.5">EventGraph 200+ nodes <span class="text-white/25">›</span> <span class="text-[#48e054]/85">extract C++</span></div>
+            <div class="text-[9.5px] font-mono text-white/40 leading-tight mt-0.5">EventGraph 200+ nodes <span class="text-white/25">›</span> <span class="text-[#00A63D]/85">extract C++</span></div>
           </div>
         </div>
         <div class="flex items-center gap-2 px-2.5 py-2 rounded-lg bg-white/[0.03] border border-white/[0.07]">
           <img src="/docs/brand-assets/godot.svg" class="h-5 opacity-80 flex-shrink-0" />
           <div class="flex-1 min-w-0">
             <div class="text-[11px] font-bold text-white/90 leading-tight">Godot · GDScript typing</div>
-            <div class="text-[9.5px] font-mono text-white/40 leading-tight mt-0.5">untyped var in tight loop <span class="text-white/25">›</span> <span class="text-[#48e054]/85">: int</span></div>
+            <div class="text-[9.5px] font-mono text-white/40 leading-tight mt-0.5">untyped var in tight loop <span class="text-white/25">›</span> <span class="text-[#00A63D]/85">: int</span></div>
           </div>
         </div>
       </div>
@@ -149,7 +149,7 @@ page: 11
           <div class="text-[10.5px] font-mono uppercase tracking-wider text-white/35">Human surface</div>
           <div class="text-[16px] font-bold text-white leading-none mt-1">Qodana · aspect view</div>
         </div>
-        <div class="text-[9px] font-mono px-2 py-0.5 rounded flex-shrink-0" style="background:rgba(72,224,84,0.08);border:1px solid rgba(72,224,84,0.20);color:rgba(72,224,84,0.78)">policy</div>
+        <div class="text-[9px] font-mono px-2 py-0.5 rounded flex-shrink-0" style="background:rgba(0, 166, 61,0.08);border:1px solid rgba(0, 166, 61,0.20);color:rgba(0, 166, 61,0.78)">policy</div>
       </div>
       <!-- Insight aspects -->
       <div>
@@ -159,7 +159,7 @@ page: 11
         </div>
         <div class="grid grid-cols-2 gap-2">
           <div class="flex items-center gap-2 text-[12px] px-2.5 py-2 rounded-md bg-white/[0.04] border border-white/[0.08] text-white/80">
-            <carbon-chart-line-data class="text-[#48e054]/85 text-[16px] flex-shrink-0" />
+            <carbon-chart-line-data class="text-[#00A63D]/85 text-[16px] flex-shrink-0" />
             <span class="truncate">quality trend</span>
           </div>
           <div class="flex items-center gap-2 text-[12px] px-2.5 py-2 rounded-md bg-white/[0.04] border border-white/[0.08] text-white/80">
@@ -184,11 +184,11 @@ page: 11
         </div>
         <div class="grid grid-cols-2 gap-2">
           <div class="flex items-center gap-2 text-[12px] px-2.5 py-2 rounded-md bg-white/[0.04] border border-white/[0.08] text-white/80">
-            <carbon-rule-locked class="text-[#ffb700]/85 text-[16px] flex-shrink-0" />
+            <carbon-rule-locked class="text-[#FE9900]/85 text-[16px] flex-shrink-0" />
             <span class="truncate">rule policy</span>
           </div>
           <div class="flex items-center gap-2 text-[12px] px-2.5 py-2 rounded-md bg-white/[0.04] border border-white/[0.08] text-white/80">
-            <carbon-task-complete class="text-[#48e054]/85 text-[16px] flex-shrink-0" />
+            <carbon-task-complete class="text-[#00A63D]/85 text-[16px] flex-shrink-0" />
             <span class="truncate">verdict</span>
           </div>
           <div class="flex items-center gap-2 text-[12px] px-2.5 py-2 rounded-md bg-white/[0.04] border border-white/[0.08] text-white/80 col-span-2">
@@ -212,10 +212,10 @@ page: 11
         <div class="text-[13px] text-white/70 leading-snug mt-0.5">guesses fixes · breaks reflection · defect leakage</div>
       </div>
     </div>
-    <div class="flex items-center gap-3 rounded-lg px-4 py-3" style="background:rgba(72,224,84,0.05);border:1px solid rgba(72,224,84,0.22)">
-      <carbon-checkmark-outline class="text-[24px] flex-shrink-0" style="color:rgba(72,224,84,0.85)" />
+    <div class="flex items-center gap-3 rounded-lg px-4 py-3" style="background:rgba(0, 166, 61,0.05);border:1px solid rgba(0, 166, 61,0.22)">
+      <carbon-checkmark-outline class="text-[24px] flex-shrink-0" style="color:rgba(0, 166, 61,0.85)" />
       <div class="flex-1 min-w-0">
-        <div class="text-[11px] font-mono uppercase tracking-wider" style="color:rgba(72,224,84,0.78)">Inspection-mediated</div>
+        <div class="text-[11px] font-mono uppercase tracking-wider" style="color:rgba(0, 166, 61,0.78)">Inspection-mediated</div>
         <div class="text-[13px] text-white/85 leading-snug mt-0.5">PSI-grounded · engine-aware · <Highlight>quick-fix paths</Highlight> humans audit</div>
       </div>
     </div>

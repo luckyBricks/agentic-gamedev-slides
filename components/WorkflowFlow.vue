@@ -21,7 +21,7 @@ defineProps<{
         class="absolute top-1/2 -right-[10px] text-base"
         :style="{
           transform: 'translateY(-50%)',
-          color: accent === 'heat' ? 'var(--mandala-c, #e73cff)' : 'var(--mandala-b, #9a4bff)',
+          color: accent === 'heat' ? 'var(--mandala-c, #C026D3)' : 'var(--mandala-b, #8B5CF6)',
         }"
       >
         →

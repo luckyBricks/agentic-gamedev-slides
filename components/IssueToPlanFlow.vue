@@ -12,7 +12,7 @@
 
     <!-- Top accent rule -->
     <div class="absolute top-0 left-6 h-px"
-      style="width: 72px; background: var(--mandala-c, #e73cff); opacity: 0.75;"></div>
+      style="width: 72px; background: var(--mandala-c, #C026D3); opacity: 0.75;"></div>
 
     <!-- Stage caption -->
     <div class="absolute top-3 right-5 font-mono select-none"
@@ -27,7 +27,7 @@
       <div class="flex flex-col flex-shrink-0" style="width: 148px;">
         <div class="font-mono mb-2.5"
           style="font-size: 10px; letter-spacing: 0.06em; color: rgba(255,255,255,0.38);">
-          <span style="color: var(--mandala-b,#9a4bff);">01</span> · Inputs
+          <span style="color: var(--mandala-b,#8B5CF6);">01</span> · Inputs
         </div>
         <div class="flex flex-col gap-1.5 flex-1 justify-center">
 
@@ -73,7 +73,7 @@
 
       <!-- ── Arrow → ── -->
       <div class="flex items-center justify-center flex-shrink-0" style="width: 32px;">
-        <span style="color: var(--mandala-b,#9a4bff); font-size: 20px; opacity: 0.65;">›</span>
+        <span style="color: var(--mandala-b,#8B5CF6); font-size: 20px; opacity: 0.65;">›</span>
       </div>
 
       <!-- ─── 02 · Rider Hub ───────────────────────────────────────────── -->
@@ -86,7 +86,7 @@
         <div class="flex items-center gap-3 mb-4">
           <div class="relative flex-shrink-0">
             <div class="absolute inset-0 rounded-full pointer-events-none"
-              style="background: var(--mandala-b,#9a4bff); opacity: 0.18; filter: blur(14px); transform: scale(1.7);"></div>
+              style="background: var(--mandala-b,#8B5CF6); opacity: 0.18; filter: blur(14px); transform: scale(1.7);"></div>
             <img src="/docs/brand-assets/Rider/Rider_icon.svg"
               style="height: 46px; width: 46px; position: relative;" alt="Rider" />
           </div>
@@ -110,7 +110,7 @@
         <div class="flex flex-col gap-2 flex-1">
 
           <div class="flex items-stretch gap-3" style="padding: 3px 0;">
-            <div style="width: 3px; background: var(--mandala-b,#9a4bff); flex-shrink: 0; border-radius: 1.5px;"></div>
+            <div style="width: 3px; background: var(--mandala-b,#8B5CF6); flex-shrink: 0; border-radius: 1.5px;"></div>
             <div>
               <div class="font-mono" style="font-size: 8px; color: rgba(255,255,255,0.30); letter-spacing: 0.04em; line-height: 1;">Context</div>
               <div class="text-white" style="font-size: 12px; font-weight: 600; line-height: 1.3; margin-top: 2px;">
@@ -120,7 +120,7 @@
           </div>
 
           <div class="flex items-stretch gap-3" style="padding: 3px 0;">
-            <div style="width: 3px; background: var(--mandala-b,#9a4bff); flex-shrink: 0; border-radius: 1.5px;"></div>
+            <div style="width: 3px; background: var(--mandala-b,#8B5CF6); flex-shrink: 0; border-radius: 1.5px;"></div>
             <div>
               <div class="font-mono" style="font-size: 8px; color: rgba(255,255,255,0.30); letter-spacing: 0.04em; line-height: 1;">Impact Analysis</div>
               <div class="text-white" style="font-size: 12px; font-weight: 600; line-height: 1.3; margin-top: 2px;">
@@ -130,7 +130,7 @@
           </div>
 
           <div class="flex items-stretch gap-3" style="padding: 3px 0;">
-            <div style="width: 3px; background: var(--mandala-b,#9a4bff); flex-shrink: 0; border-radius: 1.5px;"></div>
+            <div style="width: 3px; background: var(--mandala-b,#8B5CF6); flex-shrink: 0; border-radius: 1.5px;"></div>
             <div>
               <div class="font-mono" style="font-size: 8px; color: rgba(255,255,255,0.30); letter-spacing: 0.04em; line-height: 1;">Execution</div>
               <div class="text-white" style="font-size: 12px; font-weight: 600; line-height: 1.3; margin-top: 2px;">
@@ -140,7 +140,7 @@
           </div>
 
           <div class="flex items-stretch gap-3" style="padding: 3px 0;">
-            <div style="width: 3px; background: var(--mandala-b,#9a4bff); flex-shrink: 0; border-radius: 1.5px;"></div>
+            <div style="width: 3px; background: var(--mandala-b,#8B5CF6); flex-shrink: 0; border-radius: 1.5px;"></div>
             <div>
               <div class="font-mono" style="font-size: 8px; color: rgba(255,255,255,0.30); letter-spacing: 0.04em; line-height: 1;">Human Control</div>
               <div class="text-white" style="font-size: 12px; font-weight: 600; line-height: 1.3; margin-top: 2px;">
@@ -155,7 +155,7 @@
         <div class="flex items-center justify-between mt-3 pt-2.5"
           style="border-top: 1px solid rgba(255,255,255,0.06);">
           <div class="font-mono" style="font-size: 10px; letter-spacing: 0.06em; color: rgba(255,255,255,0.35);">
-            <span style="color: var(--mandala-b,#9a4bff);">02</span> · Hub
+            <span style="color: var(--mandala-b,#8B5CF6);">02</span> · Hub
           </div>
           <div class="font-mono" style="font-size: 10px; font-weight: 600; color: #FF0A67; letter-spacing: 0.02em;">
             ← generic AI skips this
@@ -207,7 +207,7 @@
       <div class="flex flex-col flex-shrink-0" style="width: 148px;">
         <div class="font-mono mb-2.5"
           style="font-size: 10px; letter-spacing: 0.06em; color: rgba(255,255,255,0.38);">
-          <span style="color: var(--mandala-b,#9a4bff);">03</span> · Coding Agents
+          <span style="color: var(--mandala-b,#8B5CF6);">03</span> · Coding Agents
         </div>
         <div class="flex flex-col gap-1.5">
 
@@ -257,8 +257,8 @@
 
         <!-- Connector ↓ to plan output -->
         <div class="flex flex-col items-center" style="padding: 5px 0 3px;">
-          <div style="width: 1px; height: 10px; background: var(--mandala-b,#9a4bff); opacity: 0.45;"></div>
-          <span style="color: var(--mandala-b,#9a4bff); font-size: 10px; opacity: 0.65; line-height: 1;">▾</span>
+          <div style="width: 1px; height: 10px; background: var(--mandala-b,#8B5CF6); opacity: 0.45;"></div>
+          <span style="color: var(--mandala-b,#8B5CF6); font-size: 10px; opacity: 0.65; line-height: 1;">▾</span>
         </div>
 
         <!-- Plan output card -->

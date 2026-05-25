@@ -22,8 +22,8 @@ const rows = [
             :style="{
               height: 8 + Math.abs(Math.sin(idx * (r.title.length % 3 + 0.7))) * 18 + 'px',
               background: idx % 4 === 0
-                ? 'linear-gradient(180deg, var(--mandala-c, #ff3aa8), var(--mandala-b, #ff7a3c))'
-                : 'linear-gradient(180deg, var(--mandala-a, #9a4bff), var(--mandala-b, #3ad9ff))',
+                ? 'linear-gradient(180deg, var(--mandala-c, #C026D3), var(--mandala-b, #FF8200))'
+                : 'linear-gradient(180deg, var(--mandala-a, #8B5CF6), var(--mandala-b, #C026D3))',
             }"
           />
         </div>

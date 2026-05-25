@@ -1,63 +1,104 @@
 /*
- * JetBrains .NET / GameDev — Rider Agentic GameDev deck theme.
- * Design reference: DESIGN.md + temp/Rider 功能速览 2026.1 Promo (1).pdf
+ * JetBrains GameDev — Neumorphism deck theme.
+ * Design reference: DESIGN.md (Neumorphism applied over JetBrains branding,
+ * violet → magenta → Rider-red gradient).
  *
- * Key principles from the reference deck:
- * - Flat near-black canvas. All ambient color comes from the chapter-tinted mandala.
- * - Pure white text. No gradient washes under body copy.
- * - Red-underline kicker is the primary section label.
- * - Solid chips: Junie-pink Tip, Qodana-green Beta/New.
- * - Yellow marker highlight for single technical terms.
- * - Corner badge (Rider icon + JETBRAINS IDE) top-right; italic serif page number bottom-right.
+ * Key principles:
+ * - Near-black violet-tinted canvas (#1A1424). Surfaces are subtly elevated
+ *   (#241A33 / #2D1F3F) with soft inner/outer shadows for extrusion.
+ * - Bold light text (#F1F2F5). Body copy stays light — never gradient.
+ * - Rider-red underlined kicker is the primary section label.
+ * - Chips are extruded neumorphic pills: magenta "Tip", Qodana-green "Beta/New".
+ * - Yellow marker for single technical terms.
+ * - Chapter accent slides along violet → magenta → Rider-red, with Qodana
+ *   green reserved for QA chapters. Legacy chapter names (cyan / amber) are
+ *   aliased to magenta / red for backward compatibility during page migration.
  */
 
 :root {
-  /* Canvas */
-  --rider-bg: #050510;
-  --rider-bg-2: #0b0616;
+  /* Canvas — near-black violet-tinted */
+  --rider-bg: #1A1424;
+  --rider-bg-2: #241A33;      /* elevated surface */
+  --rider-bg-3: #2D1F3F;      /* most-elevated surface / hover */
+  --rider-bg-press: #14101D;  /* inset / pressed */
 
-  /* Ink */
-  --rider-ink: #ffffff;
-  --rider-ink-dim: rgba(255, 255, 255, 0.72);
-  --rider-ink-muted: rgba(255, 255, 255, 0.5);
-  --rider-ink-faint: rgba(255, 255, 255, 0.28);
+  /* Ink — light on dark */
+  --rider-ink: #F1F2F5;
+  --rider-ink-dim: rgba(241, 242, 245, 0.78);
+  --rider-ink-muted: rgba(241, 242, 245, 0.55);
+  --rider-ink-faint: rgba(241, 242, 245, 0.32);
 
-  /* Surface */
-  --rider-panel: rgba(255, 255, 255, 0.04);
-  --rider-panel-strong: rgba(255, 255, 255, 0.08);
-  --rider-panel-border: rgba(255, 255, 255, 0.1);
+  /* Legacy surface aliases — kept stable so existing component CSS keeps working */
+  --rider-panel: var(--rider-bg-2);
+  --rider-panel-strong: var(--rider-bg-3);
+  --rider-panel-border: rgba(241, 242, 245, 0.06);
 
   /* Authoritative brand anchors (from docs/brand-assets) */
   --rider-blue: #007dfe;
   --rider-amber-brand: #ffb700;
-  --rider-red: #ff0a67;
-  --junie-violet: #7256ff;
-  --junie-pink: #ff2d90;
-  --junie-orange: #ff8200;
-  --qodana-green: #48e054;
-  --ai-orange: #ff9419;
-  --ai-red: #ff021d;
-  --ai-magenta: #e600ff;
+  --rider-red: #FF0A67;       /* red anchor — Rider-red */
+  --junie-violet: #7C3AED;    /* aligned to violet anchor */
+  --junie-pink: #C026D3;      /* aligned to magenta anchor */
+  --junie-orange: #FF8200;
+  --qodana-green: #00A63D;
+  --ai-orange: #FE9900;
+  --ai-red: #FF021D;
+  --ai-magenta: #C026D3;
 
-  /* Working palette (mandala + accents) */
-  --rider-indigo: #6c3bff;
-  --rider-violet: #9a4bff;
-  --rider-magenta: #e73cff;
-  --rider-pink: #ff3aa8;
-  --rider-orange: #ff7a3c;
-  --rider-amber: #ffb547;
-  --rider-cyan: #3ad9ff;
-  --rider-teal: #22b8c0;
+  /* Neumorphism gradient anchors (canonical) */
+  --neo-violet: #7C3AED;
+  --neo-magenta: #C026D3;
+  --neo-red: #FF0A67;
+  --neo-green: #00A63D;
+  --neo-amber: #FE9900;
+
+  /* Legacy working palette aliases — remapped to new gradient */
+  --rider-indigo: #6D28D9;
+  --rider-violet: #7C3AED;
+  --rider-magenta: #C026D3;
+  --rider-pink: #FF0A67;
+  --rider-orange: #FF8200;
+  --rider-amber: #FE9900;
+  --rider-cyan: #C026D3;      /* deprecated; aliased to magenta */
+  --rider-teal: #C026D3;      /* deprecated; aliased to magenta */
 
   /* Utility */
-  --rider-highlight: #ffe55e;
+  --rider-highlight: #FFE55E;
 
-  /* Current chapter mandala color (overridden per slide) */
-  --mandala-a: #6c3bff;
-  --mandala-b: #9a4bff;
-  --mandala-c: #e73cff;
+  /* Neumorphic shadow tokens — violet-tinted top-left highlight,
+     near-black bottom-right depth */
+  --neo-shadow-light: rgba(196, 150, 255, 0.08);
+  --neo-shadow-light-strong: rgba(196, 150, 255, 0.14);
+  --neo-shadow-dark: rgba(0, 0, 0, 0.55);
+  --neo-shadow-dark-strong: rgba(0, 0, 0, 0.72);
+  --neo-glow-violet: rgba(124, 58, 237, 0.32);
+  --neo-glow-magenta: rgba(192, 38, 211, 0.32);
+  --neo-glow-red: rgba(255, 10, 103, 0.32);
 
-  --slidev-theme-primary: #e73cff;
+  /* Neo elevation presets */
+  --neo-extruded:
+    -4px -4px 10px var(--neo-shadow-light),
+    4px 4px 14px var(--neo-shadow-dark);
+  --neo-extruded-strong:
+    -6px -6px 14px var(--neo-shadow-light-strong),
+    8px 8px 20px var(--neo-shadow-dark-strong);
+  --neo-extruded-soft:
+    -2px -2px 6px var(--neo-shadow-light),
+    2px 2px 8px var(--neo-shadow-dark);
+  --neo-inset:
+    inset -3px -3px 8px var(--neo-shadow-light),
+    inset 3px 3px 8px var(--neo-shadow-dark);
+  --neo-inset-strong:
+    inset -4px -4px 10px var(--neo-shadow-light-strong),
+    inset 4px 4px 10px var(--neo-shadow-dark-strong);
+
+  /* Current chapter accent (overridden per slide via .rider-chapter--*) */
+  --mandala-a: #7C3AED;
+  --mandala-b: #C026D3;
+  --mandala-c: #FF0A67;
+  --chapter-accent: #C026D3;
+
+  --slidev-theme-primary: var(--neo-magenta);
 }
 
 html,
@@ -70,12 +111,12 @@ body {
   background: var(--rider-bg) !important;
 }
 
-/* Flat canvas. The mandala does the atmospheric work.
-   !important overrides the default Slidev theme to enforce the dark JetBrains palette. */
+/* Flat canvas. Neumorphic surfaces handle the depth.
+   !important overrides the default Slidev theme. */
 .slidev-layout {
   background: var(--rider-bg) !important;
   color: var(--rider-ink) !important;
-  font-family: 'Inter', -apple-system, system-ui, 'Segoe UI', Roboto, Ubuntu, sans-serif;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
   padding: 48px 56px;
 }
 
@@ -86,6 +127,7 @@ body {
   color: var(--rider-ink) !important;
   letter-spacing: -0.015em;
   font-weight: 800 !important;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
 }
 
 .slidev-layout h1 {
@@ -111,14 +153,14 @@ body {
 }
 
 .slidev-layout a {
-  color: var(--rider-magenta);
+  color: var(--neo-magenta);
   text-decoration: none;
-  border-bottom: 1px solid rgba(231, 60, 255, 0.4);
+  border-bottom: 1px solid rgba(192, 38, 211, 0.4);
 }
 
 .slidev-layout code {
-  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
-  color: #f2e6ff;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+  color: #F1E6FF;
 }
 
 .slidev-layout ul > li::marker {
@@ -138,75 +180,179 @@ body {
   top: 0.55em;
   width: 8px;
   height: 8px;
-  border: 1.5px solid var(--rider-ink-dim);
-  border-radius: 1px;
-  transform: rotate(0deg);
+  border-radius: 2px;
+  background: linear-gradient(135deg, var(--neo-violet), var(--neo-magenta), var(--neo-red));
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3),
+              -1px -1px 2px var(--neo-shadow-light),
+              1px 1px 2px var(--neo-shadow-dark);
 }
 
-/* ------- Kicker: red-underlined section label ------- */
+/* =====================================================================
+   Neumorphic surface primitives
+   ===================================================================== */
+
+.neo-card {
+  background: var(--rider-bg-2);
+  border-radius: 14px;
+  box-shadow: var(--neo-extruded);
+  padding: 16px 18px;
+  color: var(--rider-ink);
+}
+
+.neo-card--soft {
+  box-shadow: var(--neo-extruded-soft);
+}
+
+.neo-card--strong {
+  background: var(--rider-bg-3);
+  box-shadow: var(--neo-extruded-strong);
+}
+
+.neo-card--inset {
+  background: var(--rider-bg-press);
+  box-shadow: var(--neo-inset);
+  border-radius: 14px;
+  padding: 16px 18px;
+  color: var(--rider-ink);
+}
+
+.neo-card--accent {
+  position: relative;
+}
+.neo-card--accent::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--neo-violet), var(--neo-magenta) 55%, var(--neo-red));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+.neo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--rider-bg-2);
+  box-shadow: var(--neo-extruded-soft);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--rider-ink);
+}
+
+.neo-divider {
+  height: 1px;
+  border: 0;
+  background: linear-gradient(90deg, transparent, var(--neo-violet), var(--neo-magenta), var(--neo-red), transparent);
+  opacity: 0.45;
+}
+
+.neo-glow {
+  box-shadow: 0 0 32px var(--neo-glow-magenta);
+}
+
+/* =====================================================================
+   Kicker — Rider-red underlined section label
+   ===================================================================== */
 
 .rider-kicker {
   display: inline-block;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--rider-ink);
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   text-decoration: underline solid var(--rider-red);
   text-decoration-thickness: 2px;
   text-underline-offset: 6px;
   margin-bottom: 14px;
 }
 
-/* ------- Chips ------- */
+/* =====================================================================
+   Chips — neumorphic extruded pills
+   ===================================================================== */
 
 .rider-chip {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 3px 8px;
-  border-radius: 5px;
-  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
   font-weight: 700;
   line-height: 1.2;
+  letter-spacing: 0.02em;
 }
 
 .rider-chip--tip {
-  background: var(--junie-pink);
+  background: var(--neo-magenta);
   color: #ffffff;
+  box-shadow:
+    -2px -2px 6px rgba(255, 255, 255, 0.04),
+    2px 2px 8px rgba(0, 0, 0, 0.55),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.20);
 }
 
 .rider-chip--status {
   background: var(--qodana-green);
-  color: #000000;
+  color: #001A0A;
+  box-shadow:
+    -2px -2px 6px rgba(255, 255, 255, 0.04),
+    2px 2px 8px rgba(0, 0, 0, 0.55),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.rider-chip--accent {
+  background: var(--rider-red);
+  color: #ffffff;
+  box-shadow:
+    -2px -2px 6px rgba(255, 255, 255, 0.04),
+    2px 2px 8px rgba(0, 0, 0, 0.55),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.20);
 }
 
 .rider-chip--neutral {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--rider-bg-2);
   color: var(--rider-ink);
+  box-shadow: var(--neo-extruded-soft);
   font-weight: 600;
 }
 
 .rider-chip--tag {
   background: transparent;
   color: var(--rider-ink-dim);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(241, 242, 245, 0.15);
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 2px 8px;
   font-weight: 600;
+  border-radius: 999px;
 }
 
-/* ------- Yellow highlighter ------- */
+/* =====================================================================
+   Yellow highlighter
+   ===================================================================== */
 
 .rider-highlight {
   background: var(--rider-highlight);
-  color: #3d3d3d !important;
+  color: #3D3D3D !important;
   padding: 1px 4px;
   border-radius: 2px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-/* ------- Corner badge (top-right Rider lockup) ------- */
+/* =====================================================================
+   Corner badge — top-right Rider lockup as neumorphic pill
+   ===================================================================== */
 
 .rider-corner-badge {
   position: absolute;
@@ -214,9 +360,20 @@ body {
   right: 28px;
   z-index: 20;
   pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--rider-bg-2);
+  box-shadow:
+    -2px -2px 8px var(--neo-shadow-light),
+    3px 3px 10px var(--neo-shadow-dark);
 }
 
-/* ------- Mandala wrapper (legacy, kept for direct use) ------- */
+/* =====================================================================
+   Mandala (legacy wrapper, retained for direct use)
+   ===================================================================== */
 
 .rider-mandala {
   position: absolute;
@@ -227,7 +384,7 @@ body {
   transform: translateY(-50%);
   pointer-events: none;
   z-index: 1;
-  opacity: 0.92;
+  opacity: 0.55;
 }
 
 .rider-mandala--left {
@@ -241,29 +398,21 @@ body {
 }
 
 .rider-mandala--subtle {
-  opacity: 0.55;
+  opacity: 0.32;
 }
 
-/* ------- dotUltimate animated background ------- */
-
-/*
- * Sizing rationale (16:9 canvas 1280×720, 100vh ≈ 720 canvas-px):
- *   - Target: 3/4 hemisphere visible, covering ~60% of slide width (768px).
- *   - Orb diameter = 768 * 4/3 = 1024 canvas-px  → radius = 512 px.
- *   - Orb in SVG coords spans ~1272 units (flower radius ≈ 636 units).
- *   - Required SVG display size = 1920 * (1024/1272) ≈ 1546 canvas-px ≈ 215vh.
- *   - Center of orb (SVG x=1020) placed at slide x ≈ 1024 (80% from left).
- *   - right: -37% → SVG right edge at 1280 + 37%×1280 ≈ 1754 px,
- *     SVG left ≈ 206 px, orb center ≈ 1024 px. ✓
- *   - Slide overflow:hidden clips ≈ 25% of orb (right quarter) + top/bottom arc
- *     → produces a clean three-quarter hemisphere silhouette.
- */
+/* =====================================================================
+   dotUltimate ambient background — recolored to violet→magenta→red,
+   dialed back so neumorphic surfaces lead the eye
+   ===================================================================== */
 
 .dot-ultimate-bg {
   position: absolute;
   pointer-events: none;
   z-index: 1;
-  filter: hue-rotate(var(--du-hue, 0deg)) saturate(1.05);
+  filter: hue-rotate(var(--du-hue, 0deg)) saturate(1.1);
+  opacity: 0.5;
+  mix-blend-mode: screen;
 }
 
 .dot-ultimate-bg--right {
@@ -276,7 +425,6 @@ body {
 
 .dot-ultimate-bg--left {
   top: 50%;
-  /* center (SVG x=1020, ≈53% of 215vh) placed at slide x≈256px so 1/4 bleeds off left */
   left: -44%;
   width: 215vh;
   height: 215vh;
@@ -291,7 +439,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* corner-br: smaller accent orb in bottom-right corner (~35% coverage) */
 .dot-ultimate-bg--corner-br {
   bottom: -28%;
   right: -28%;
@@ -299,23 +446,30 @@ body {
   height: 120vh;
 }
 
-/* ------- Cards ------- */
+/* =====================================================================
+   Cards (legacy alias → now neumorphic)
+   ===================================================================== */
 
 .rider-card {
   position: relative;
   padding: 14px 16px;
   border-radius: 14px;
-  background: var(--rider-panel);
-  border: 1px solid var(--rider-panel-border);
+  background: var(--rider-bg-2);
+  box-shadow: var(--neo-extruded);
+  border: none;
+  color: var(--rider-ink);
 }
 
+.rider-card--accent {
+  position: relative;
+}
 .rider-card--accent::before {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: 14px;
   padding: 1px;
-  background: linear-gradient(135deg, var(--mandala-c), var(--mandala-b) 55%, var(--mandala-a));
+  background: linear-gradient(135deg, var(--neo-red), var(--neo-magenta) 55%, var(--neo-violet));
   mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
@@ -324,27 +478,33 @@ body {
 }
 
 .rider-card--dark {
-  background: #0e0a1a;
-  border-color: rgba(255, 255, 255, 0.06);
+  background: var(--rider-bg-press);
+  box-shadow: var(--neo-inset);
 }
 
-/* ------- Keyboard hint ------- */
+/* =====================================================================
+   Keyboard hint (neumorphic key)
+   ===================================================================== */
 
 .rider-kbd {
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
   font-size: 12px;
-  padding: 2px 8px;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--rider-bg-2);
+  box-shadow:
+    -2px -2px 4px var(--neo-shadow-light),
+    2px 2px 6px var(--neo-shadow-dark);
   color: var(--rider-ink);
 }
 
-/* ------- Pipeline ------- */
+/* =====================================================================
+   Pipeline — neumorphic nodes connected by violet→magenta→red rails
+   ===================================================================== */
 
 .rider-pipeline {
   display: grid;
-  gap: 12px;
+  gap: 16px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
@@ -352,16 +512,18 @@ body {
   position: relative;
   padding: 14px 12px;
   border-radius: 12px;
-  background: linear-gradient(180deg, rgba(154, 75, 255, 0.18), rgba(58, 217, 255, 0.06));
-  border: 1px solid rgba(154, 75, 255, 0.32);
+  background: var(--rider-bg-2);
+  box-shadow: var(--neo-extruded);
   text-align: center;
   font-size: 13px;
   color: var(--rider-ink);
 }
 
 .rider-pipeline__node--gate {
-  background: linear-gradient(180deg, rgba(255, 10, 103, 0.22), rgba(255, 122, 60, 0.14));
-  border-color: rgba(255, 10, 103, 0.5);
+  background: linear-gradient(135deg, rgba(255, 10, 103, 0.16), rgba(192, 38, 211, 0.10));
+  box-shadow:
+    var(--neo-extruded),
+    inset 0 0 0 1px rgba(255, 10, 103, 0.35);
 }
 
 .rider-pipeline__node::after {
@@ -371,24 +533,28 @@ body {
   right: -14px;
   width: 14px;
   height: 2px;
-  background: rgba(255, 255, 255, 0.22);
+  background: linear-gradient(90deg, var(--neo-violet), var(--neo-magenta), var(--neo-red));
+  opacity: 0.65;
   transform: translateY(-50%);
   z-index: 2;
+  border-radius: 2px;
 }
 
 .rider-pipeline__node:last-child::after {
   display: none;
 }
 
-/* ------- Mockup chrome (used inside HeroVisual) ------- */
+/* =====================================================================
+   Mockup chrome (used inside HeroVisual) — neumorphic inset terminal
+   ===================================================================== */
 
 .rider-mockup {
   position: relative;
   border-radius: 12px;
-  background: #0a0814;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--rider-bg-press);
+  box-shadow: var(--neo-inset);
   overflow: hidden;
-  padding: 12px 14px;
+  padding: 14px 16px;
   color: var(--rider-ink);
   font-size: 13px;
 }
@@ -398,29 +564,30 @@ body {
   align-items: center;
   gap: 6px;
   padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(241, 242, 245, 0.08);
   margin-bottom: 10px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
   font-size: 11px;
   color: var(--rider-ink-dim);
 }
 
-/* Scanline texture is OK *inside* a mockup card, not on the slide canvas. */
 .rider-mockup .rider-scanline {
   position: absolute;
   inset: 0;
   pointer-events: none;
   background: repeating-linear-gradient(
     0deg,
-    rgba(255, 255, 255, 0.03) 0px,
-    rgba(255, 255, 255, 0.03) 1px,
+    rgba(241, 242, 245, 0.03) 0px,
+    rgba(241, 242, 245, 0.03) 1px,
     transparent 1px,
     transparent 3px
   );
   opacity: 0.35;
 }
 
-/* ------- Subtle text utilities ------- */
+/* =====================================================================
+   Subtle text utilities
+   ===================================================================== */
 
 .rider-subtle {
   color: var(--rider-ink-dim);
@@ -434,17 +601,23 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.22em;
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 700;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
 }
 
 .rider-mono {
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
 }
 
-/* ------- Reserved gradient voices (cover / act opener only) ------- */
+/* =====================================================================
+   Reserved gradient voices — cover / act opener only
+   ===================================================================== */
 
 .rider-gradient-text {
-  background: linear-gradient(90deg, var(--rider-pink) 0%, var(--rider-magenta) 35%, var(--rider-violet) 70%, var(--rider-cyan) 100%);
+  background: linear-gradient(90deg,
+    var(--neo-violet) 0%,
+    var(--neo-magenta) 50%,
+    var(--neo-red) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -452,86 +625,121 @@ body {
 }
 
 .rider-heat-text {
-  background: linear-gradient(90deg, var(--rider-amber) 0%, var(--rider-orange) 30%, var(--rider-pink) 65%, var(--rider-violet) 100%);
+  background: linear-gradient(90deg,
+    var(--neo-amber) 0%,
+    var(--neo-red) 35%,
+    var(--neo-magenta) 70%,
+    var(--neo-violet) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
-/* ------- Tables ------- */
+/* =====================================================================
+   Tables — neumorphic surface
+   ===================================================================== */
 
 .slidev-layout table {
   border-collapse: separate;
   border-spacing: 0;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 10px;
+  border: none;
+  border-radius: 12px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--rider-bg-2);
+  box-shadow: var(--neo-extruded-soft);
   font-size: 14px;
 }
 
 .slidev-layout table th {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--rider-bg-3);
   color: var(--rider-ink);
   font-weight: 700;
   letter-spacing: 0.02em;
   text-align: left;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
 }
 
 .slidev-layout table td,
 .slidev-layout table th {
-  border-color: rgba(255, 255, 255, 0.08);
-  padding: 8px 14px;
+  border-color: rgba(241, 242, 245, 0.06);
+  padding: 10px 14px;
 }
 
-/* ------- Divider ------- */
+/* =====================================================================
+   Divider
+   ===================================================================== */
 
 .rider-divider {
   height: 1px;
-  background: rgba(255, 255, 255, 0.12);
+  background: linear-gradient(90deg, transparent, rgba(241, 242, 245, 0.14), transparent);
   border: 0;
 }
 
-/* ------- Chapter palette variants (apply to slide root) ------- */
+/* =====================================================================
+   Chapter palette variants — applied to slide root
+   ===================================================================== */
 
 /*
- * --du-hue: CSS hue-rotate value applied to the DotUltimateBg SVG.
- * The original SVG colors are purple→magenta (hue ~248°–306°).
- * Rotating shifts the entire orb to the chapter's color family.
+ * Chapter accent slides along the violet → magenta → Rider-red gradient.
+ * --du-hue is the hue-rotate value applied to the DotUltimateBg SVG
+ * (whose source gradient sits around hue 280°-300°, deep violet to magenta).
+ *
+ * Color-name → brand mapping:
+ *   violet   → Unreal / engine / C++ chapters
+ *   magenta  → Unity / tooling chapters
+ *   red      → AI / Junie / agents chapters (Rider-red anchor)
+ *   green    → QA / Qodana chapters
+ *
+ * Legacy chapter names (`cyan`, `amber`) are aliased to magenta / red for
+ * backward compatibility during page migration (Phase 5 will rename pages).
  */
 
 .rider-chapter--violet {
-  --mandala-a: #6c3bff;
-  --mandala-b: #9a4bff;
-  --mandala-c: #e73cff;
-  --du-hue: 0deg;          /* original purple/magenta */
-}
-
-.rider-chapter--cyan {
-  --mandala-a: #2d6ef0;
-  --mandala-b: #22b8c0;
-  --mandala-c: #3ad9ff;
-  --du-hue: -90deg;        /* purple → blue/cyan */
-}
-
-.rider-chapter--amber {
-  --mandala-a: #ffb700;
-  --mandala-b: #ff9419;
-  --mandala-c: #ff0a67;
-  --du-hue: 130deg;        /* purple → orange/amber */
-}
-
-.rider-chapter--green {
-  --mandala-a: #22b8c0;
-  --mandala-b: #48e054;
-  --mandala-c: #a6f25c;
-  --du-hue: 210deg;        /* purple → teal/green */
+  --mandala-a: #6D28D9;
+  --mandala-b: #7C3AED;
+  --mandala-c: #C026D3;
+  --chapter-accent: #7C3AED;
+  --du-hue: -10deg;
 }
 
 .rider-chapter--magenta {
-  --mandala-a: #7256ff;
-  --mandala-b: #ff2d90;
-  --mandala-c: #ff8200;
-  --du-hue: 30deg;         /* purple → hot pink/magenta */
+  --mandala-a: #7C3AED;
+  --mandala-b: #C026D3;
+  --mandala-c: #FF2D90;
+  --chapter-accent: #C026D3;
+  --du-hue: 15deg;
+}
+
+.rider-chapter--red {
+  --mandala-a: #C026D3;
+  --mandala-b: #FF0A67;
+  --mandala-c: #FF8200;
+  --chapter-accent: #FF0A67;
+  --du-hue: 45deg;
+}
+
+.rider-chapter--green {
+  --mandala-a: #C026D3;
+  --mandala-b: #00A63D;
+  --mandala-c: #A6F25C;
+  --chapter-accent: #00A63D;
+  --du-hue: 165deg;
+}
+
+/* Legacy aliases — Phase 5 will retire these */
+.rider-chapter--cyan {
+  --mandala-a: #7C3AED;
+  --mandala-b: #C026D3;
+  --mandala-c: #FF2D90;
+  --chapter-accent: #C026D3;
+  --du-hue: 15deg;
+}
+
+.rider-chapter--amber {
+  --mandala-a: #C026D3;
+  --mandala-b: #FF0A67;
+  --mandala-c: #FF8200;
+  --chapter-accent: #FF0A67;
+  --du-hue: 45deg;
 }

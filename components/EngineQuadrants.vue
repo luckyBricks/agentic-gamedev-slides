@@ -39,38 +39,38 @@ const cells = [
 ] as const
 
 const toneGradient: Record<string, string> = {
-  violet: 'from-[#6c3bff44] to-[#9a4bff11] border-[#9a4bff55]',
-  pink:   'from-[#ff3aa844] to-[#e73cff11] border-[#ff3aa855]',
-  amber:  'from-[#ff7a3c44] to-[#ffb54711] border-[#ffb54755]',
-  cyan:   'from-[#3ad9ff44] to-[#6c3bff11] border-[#3ad9ff55]',
+  violet: 'from-[#7C3AED44] to-[#8B5CF611] border-[#8B5CF655]',
+  pink:   'from-[#C026D344] to-[#C026D311] border-[#C026D355]',
+  amber:  'from-[#FF820044] to-[#FE990011] border-[#FE990055]',
+  cyan:   'from-[#C026D344] to-[#7C3AED11] border-[#C026D355]',
 }
 
 const toneTag: Record<string, string> = {
-  violet: 'bg-[#9a4bff22] text-[#c89bff] border-[#9a4bff44]',
-  pink:   'bg-[#ff3aa822] text-[#ff9ad0] border-[#ff3aa844]',
-  amber:  'bg-[#ffb54722] text-[#ffd280] border-[#ffb54744]',
-  cyan:   'bg-[#3ad9ff22] text-[#80eeff] border-[#3ad9ff44]',
+  violet: 'bg-[#8B5CF622] text-[#C4B5FD] border-[#8B5CF644]',
+  pink:   'bg-[#C026D322] text-[#F0ABFC] border-[#C026D344]',
+  amber:  'bg-[#FE990022] text-[#FCD34D] border-[#FE990044]',
+  cyan:   'bg-[#C026D322] text-[#F0ABFC] border-[#C026D344]',
 }
 
 const toneLabel: Record<string, string> = {
-  violet: 'text-[#9a4bff]',
-  pink:   'text-[#ff3aa8]',
-  amber:  'text-[#ffb547]',
-  cyan:   'text-[#3ad9ff]',
+  violet: 'text-[#8B5CF6]',
+  pink:   'text-[#C026D3]',
+  amber:  'text-[#FE9900]',
+  cyan:   'text-[#C026D3]',
 }
 
 const toneLayerBadge: Record<string, string> = {
-  violet: 'bg-[#9a4bff28] text-[#b57aff] border-[#9a4bff50]',
-  pink:   'bg-[#ff3aa828] text-[#ff7dc0] border-[#ff3aa850]',
-  amber:  'bg-[#ffb54728] text-[#ffc860] border-[#ffb54750]',
-  cyan:   'bg-[#3ad9ff28] text-[#60e8ff] border-[#3ad9ff50]',
+  violet: 'bg-[#8B5CF628] text-[#C4B5FD] border-[#8B5CF650]',
+  pink:   'bg-[#C026D328] text-[#F0ABFC] border-[#C026D350]',
+  amber:  'bg-[#FE990028] text-[#FCD34D] border-[#FE990050]',
+  cyan:   'bg-[#C026D328] text-[#F0ABFC] border-[#C026D350]',
 }
 
 const toneNeedsLine: Record<string, string> = {
-  violet: 'border-[#9a4bff60] text-[#b57aff99]',
-  pink:   'border-[#ff3aa860] text-[#ff7dc099]',
-  amber:  'border-[#ffb54760] text-[#ffc86099]',
-  cyan:   'border-[#3ad9ff60] text-[#60e8ff99]',
+  violet: 'border-[#8B5CF660] text-[#C4B5FD99]',
+  pink:   'border-[#C026D360] text-[#F0ABFC99]',
+  amber:  'border-[#FE990060] text-[#FCD34D99]',
+  cyan:   'border-[#C026D360] text-[#F0ABFC99]',
 }
 </script>
 

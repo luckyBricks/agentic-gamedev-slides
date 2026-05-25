@@ -1,6 +1,6 @@
 ---
 layout: rider
-chapter: cyan
+chapter: magenta
 page: 10
 mandalaOpacity: 0.6
 ---

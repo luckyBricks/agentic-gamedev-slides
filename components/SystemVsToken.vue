@@ -20,10 +20,10 @@ const layers = [
       class="relative h-[52px] flex items-center justify-between rounded-xl px-4"
       :class="[
         l.tone === 'muted' && 'bg-[#ffffff0d] border border-white/10',
-        l.tone === 'cool'  && 'bg-gradient-to-r from-[#3ad9ff33] to-[#6c3bff1a] border border-[#3ad9ff55]',
-        l.tone === 'warm'  && 'bg-gradient-to-r from-[#9a4bff33] to-[#e73cff1a] border border-[#9a4bff55]',
-        l.tone === 'hot'   && 'bg-gradient-to-r from-[#e73cff33] to-[#ff3aa822] border border-[#e73cff66]',
-        l.tone === 'heat'  && 'bg-gradient-to-r from-[#ff3aa855] to-[#ff7a3c33] border border-[#ff3aa888]',
+        l.tone === 'cool'  && 'bg-gradient-to-r from-[#C026D333] to-[#7C3AED1a] border border-[#C026D355]',
+        l.tone === 'warm'  && 'bg-gradient-to-r from-[#8B5CF633] to-[#C026D31a] border border-[#8B5CF655]',
+        l.tone === 'hot'   && 'bg-gradient-to-r from-[#C026D333] to-[#C026D322] border border-[#C026D366]',
+        l.tone === 'heat'  && 'bg-gradient-to-r from-[#C026D355] to-[#FF820033] border border-[#C026D388]',
       ]"
       :style="{ width: l.width + '%' }"
     >

@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 
 interface Frontmatter {
-  chapter?: 'violet' | 'cyan' | 'amber' | 'green' | 'magenta'
+  chapter?: 'violet' | 'magenta' | 'red' | 'green' | 'cyan' | 'amber'
   mandala?: 'right' | 'left' | 'center' | 'hidden' | 'corner-br'
   mandalaOpacity?: number
   mandalaVariant?: 'default' | 'wide'
@@ -30,7 +30,7 @@ const showBadge = computed(() => props.frontmatter?.badge !== false)
     <DotUltimateBg
       v-if="showBg"
       :position="bgPos === 'hidden' ? 'right' : bgPos"
-      :opacity="frontmatter?.mandalaOpacity ?? 0.82"
+      :opacity="frontmatter?.mandalaOpacity ?? 0.45"
     />
     <CornerBadge v-if="showBadge" />
     <div class="relative z-10 w-full h-full">
@@ -43,8 +43,8 @@ const showBadge = computed(() => props.frontmatter?.badge !== false)
 <style scoped>
 .rider-slide {
   padding: 48px 56px 40px 56px;
-  color: #ffffff !important;
-  background: #050510 !important;
+  color: var(--rider-ink) !important;
+  background: var(--rider-bg) !important;
 }
 
 .rider-slide :deep(h1),

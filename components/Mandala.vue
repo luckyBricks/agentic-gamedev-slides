@@ -30,11 +30,11 @@ const positionClass = computed(() => {
 const paletteVars = computed(() => {
   if (!props.color) return {}
   const palettes = {
-    violet: ['#6c3bff', '#9a4bff', '#e73cff'],
-    cyan: ['#2d6ef0', '#22b8c0', '#3ad9ff'],
-    amber: ['#ffb700', '#ff9419', '#ff0a67'],
-    green: ['#22b8c0', '#48e054', '#a6f25c'],
-    magenta: ['#7256ff', '#ff2d90', '#ff8200'],
+    violet: ['#7C3AED', '#8B5CF6', '#C026D3'],
+    cyan: ['#7C3AED', '#C026D3', '#C026D3'],
+    amber: ['#FE9900', '#FE9900', '#FF0A67'],
+    green: ['#C026D3', '#00A63D', '#48E054'],
+    magenta: ['#7C3AED', '#C026D3', '#FF8200'],
   } as const
   const [a, b, c] = palettes[props.color]
   return { '--mandala-a': a, '--mandala-b': b, '--mandala-c': c }
@@ -62,9 +62,9 @@ const ry = computed(() => (props.variant === 'wide' ? 44 : 28))
         <stop offset="100%" stop-color="var(--mandala-a)" stop-opacity="0.08" />
       </radialGradient>
       <radialGradient :id="`mandala-core-${rings}`" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#050510" stop-opacity="0.95" />
-        <stop offset="55%" stop-color="#050510" stop-opacity="0.18" />
-        <stop offset="100%" stop-color="#050510" stop-opacity="0" />
+        <stop offset="0%" stop-color="#1A1424" stop-opacity="0.95" />
+        <stop offset="55%" stop-color="#1A1424" stop-opacity="0.18" />
+        <stop offset="100%" stop-color="#1A1424" stop-opacity="0" />
       </radialGradient>
     </defs>
 

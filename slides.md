@@ -6,9 +6,9 @@ canvasWidth: 1280
 colorSchema: 'dark'
 fonts:
   sans: 'Inter'
-  mono: 'JetBrains Mono'
-  serif: 'Crimson Pro'
-  weights: '400,500,600,700,800'
+  mono: 'Inter'
+  serif: 'Inter'
+  weights: '400,500,600,700,800,900'
   italic: true
 transition: fade-out
 layout: rider-cover

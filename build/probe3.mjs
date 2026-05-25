@@ -1,0 +1,14 @@
+import { chromium } from 'playwright-chromium';
+const b = await chromium.launch({ headless: true });
+const p = await b.newPage();
+const reqs = [];
+p.on('request', r => reqs.push(r.url()));
+p.on('requestfailed', r => console.log('FAIL', r.url(), r.failure()?.errorText));
+p.on('response', r => { if (r.status() >= 400) console.log('STATUS', r.status(), r.url()); });
+p.on('pageerror', e => console.log('PERR', e.message));
+p.on('console', m => console.log('C', m.type(), m.text().slice(0,150)));
+await p.goto('http://localhost:3033/1', { waitUntil: 'commit' });
+await p.waitForTimeout(8000);
+console.log('TOTAL REQS', reqs.length);
+console.log('SAMPLE', reqs.slice(0,5));
+await b.close();

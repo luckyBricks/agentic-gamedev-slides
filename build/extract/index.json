@@ -1,0 +1,161 @@
+{
+  "slides": [
+    {
+      "slide": 1,
+      "texts": 8,
+      "images": 10,
+      "boxes": 2
+    },
+    {
+      "slide": 2,
+      "texts": 23,
+      "images": 6,
+      "boxes": 27
+    },
+    {
+      "slide": 3,
+      "texts": 54,
+      "images": 8,
+      "boxes": 32
+    },
+    {
+      "slide": 4,
+      "texts": 15,
+      "images": 17,
+      "boxes": 7
+    },
+    {
+      "slide": 5,
+      "texts": 19,
+      "images": 3,
+      "boxes": 15
+    },
+    {
+      "slide": 6,
+      "texts": 34,
+      "images": 15,
+      "boxes": 11
+    },
+    {
+      "slide": 7,
+      "texts": 13,
+      "images": 3,
+      "boxes": 12
+    },
+    {
+      "slide": 8,
+      "texts": 22,
+      "images": 3,
+      "boxes": 8
+    },
+    {
+      "slide": 9,
+      "texts": 72,
+      "images": 16,
+      "boxes": 45
+    },
+    {
+      "slide": 10,
+      "texts": 25,
+      "images": 12,
+      "boxes": 14
+    },
+    {
+      "slide": 11,
+      "texts": 48,
+      "images": 37,
+      "boxes": 34
+    },
+    {
+      "slide": 12,
+      "texts": 16,
+      "images": 6,
+      "boxes": 7
+    },
+    {
+      "slide": 13,
+      "texts": 58,
+      "images": 16,
+      "boxes": 32
+    },
+    {
+      "slide": 14,
+      "texts": 40,
+      "images": 16,
+      "boxes": 32
+    },
+    {
+      "slide": 15,
+      "texts": 23,
+      "images": 3,
+      "boxes": 14
+    },
+    {
+      "slide": 16,
+      "texts": 15,
+      "images": 3,
+      "boxes": 9
+    },
+    {
+      "slide": 17,
+      "texts": 21,
+      "images": 3,
+      "boxes": 14
+    },
+    {
+      "slide": 18,
+      "texts": 22,
+      "images": 3,
+      "boxes": 15
+    },
+    {
+      "slide": 19,
+      "texts": 24,
+      "images": 3,
+      "boxes": 8
+    },
+    {
+      "slide": 20,
+      "texts": 22,
+      "images": 7,
+      "boxes": 19
+    },
+    {
+      "slide": 21,
+      "texts": 31,
+      "images": 3,
+      "boxes": 14
+    },
+    {
+      "slide": 22,
+      "texts": 9,
+      "images": 4,
+      "boxes": 2
+    },
+    {
+      "slide": 23,
+      "texts": 33,
+      "images": 3,
+      "boxes": 6
+    },
+    {
+      "slide": 24,
+      "texts": 19,
+      "images": 3,
+      "boxes": 15
+    },
+    {
+      "slide": 25,
+      "texts": 22,
+      "images": 3,
+      "boxes": 14
+    },
+    {
+      "slide": 26,
+      "texts": 26,
+      "images": 3,
+      "boxes": 13
+    }
+  ],
+  "total": 26
+}

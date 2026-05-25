@@ -9,10 +9,10 @@ const demos = [
 ] as const
 
 const toneMap: Record<string, string> = {
-  violet: 'from-[#6c3bff]/40 to-[#9a4bff]/10',
-  pink:   'from-[#ff3aa8]/40 to-[#e73cff]/10',
-  amber:  'from-[#ff7a3c]/40 to-[#ffb547]/10',
-  cyan:   'from-[#3ad9ff]/40 to-[#6c3bff]/10',
+  violet: 'from-[#7C3AED]/40 to-[#8B5CF6]/10',
+  pink:   'from-[#C026D3]/40 to-[#C026D3]/10',
+  amber:  'from-[#FF8200]/40 to-[#FE9900]/10',
+  cyan:   'from-[#C026D3]/40 to-[#7C3AED]/10',
 }
 </script>
 
